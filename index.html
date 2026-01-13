@@ -1,1199 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-        <link rel="icon" type="image/png" href="favicon.png">
-            <link rel="sitemap" type="text/plain" href="/llm-sitemap.txt" title="LLM Sitemap">
-    <title>Gold Standard Local SEO Agency | Sacramento AI-Powered Local Search Experts</title>
-    
-  <style>
-    /* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.tagline {
-    font-size: 1.4rem;
-    margin-bottom: 30px;
-    opacity: 0.95;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 18px 40px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.btn-primary {
-    background: white;
-    color: #FF6B35;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: white;
-    border: 3px solid white;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: #FF6B35;
-}
-
-.trust-badges {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.trust-badges span {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-/* Problem Solution Section */
-.problem-solution {
-    padding: 80px 20px;
-    background: #f9f9f9;
-}
-
-.problem-solution h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #333;
-}
-
-.problems {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.problem-card {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.problem-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #ff4444;
-}
-
-.solution {
-    text-align: center;
-    padding: 60px 40px;
-    background: linear-gradient(135deg, #4CAF50 0%, #45B649 100%);
-    color: white;
-    border-radius: 20px;
-}
-
-.solution h2 {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.big-text {
-    font-size: 1.4rem;
-    line-height: 1.6;
-}
-
-/* Services Section */
-.services {
-    padding: 80px 20px;
-    background: white;
-}
-
-.services h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.section-subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 50px;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background: #f9f9f9;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.service-card.featured {
-    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-    color: white;
-}
-
-.service-card.featured h3,
-.service-card.featured p,
-.service-card.featured li {
-    color: white;
-}
-
-.badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #FFD700;
-    color: #333;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.service-card ul {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.service-card li {
-    padding: 8px 0;
-    padding-left: 25px;
-    position: relative;
-}
-
-.service-card li:before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #4CAF50;
-    font-weight: 700;
-}
-
-.service-card.featured li:before {
-    color: white;
-}
-
-/* Results Section */
-.results {
-    padding: 80px 20px;
-    background: #1a1a1a;
-    color: white;
-}
-
-.results h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.result-card {
-    text-align: center;
-    padding: 40px;
-    background: #2a2a2a;
-    border-radius: 15px;
-}
-
-.number {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #FF6B35;
-    margin-bottom: 10px;
-}
-
-.result-card p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.client {
-    color: #888;
-    font-style: italic;
-}
-
-/* How It Works Section */
-.how-it-works {
-    padding: 80px 20px;
-    background: white;
-}
-
-.how-it-works h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-}
-
-.step {
-    text-align: center;
-}
-
-.step-number {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 800;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-}
-
-.step h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-/* Trust Section */
-.trust {
-    padding: 80px 20px;
-    background: #f9f9f9;
-}
-
-.trust h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.trust-card {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.trust-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-}
-
-/* Industries Section */
-.industries {
-    padding: 80px 20px;
-    background: white;
-}
-
-.industries h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.industry-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.industry-tags span {
-    background: #f0f0f0;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.industry-tags span:hover {
-    background: #FF6B35;
-    color: white;
-    transform: translateY(-3px);
-}
-
-/* CTA Section */
-.cta {
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #4CAF50 0%, #45B649 100%);
-    color: white;
-    text-align: center;
-}
-
-.cta h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-}
-
-.guarantee {
-    margin-top: 20px;
-    font-style: italic;
-    opacity: 0.9;
-}
-
-/* Contact Section */
-.contact {
-    padding: 80px 20px;
-    background: #f9f9f9;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.info-item {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-}
-
-.info-item strong {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.info-item a {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.info-item a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    background: #1a1a1a;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #FF6B35;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .tagline {
-        font-size: 1.1rem;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-    }
-    
-    .btn-primary, .btn-secondary {
-        width: 100%;
-    }
-    
-    .problems, .service-grid, .results-grid, .steps, .trust-grid, .contact-info {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Special Offer Section */
-.special-offer {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-    color: white;
-    text-align: center;
-}
-
-.offer-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 800;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-.special-offer h2 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-}
-
-.offer-subtitle {
-    font-size: 1.3rem;
-    color: #FF6B35;
-    margin-bottom: 50px;
-    font-weight: 600;
-}
-
-.pricing-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.pricing-card {
-    background: white;
-    color: #333;
-    padding: 50px 40px;
-    border-radius: 20px;
-    position: relative;
-    transition: all 0.3s ease;
-    border: 3px solid transparent;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.3);
-}
-
-.pricing-card.featured {
-    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-    color: white;
-    border: 3px solid #FFD700;
-    transform: scale(1.05);
-}
-
-.pricing-card.featured:hover {
-    transform: scale(1.08) translateY(-10px);
-}
-
-.save-badge {
-    position: absolute;
-    top: -15px;
-    right: 30px;
-    background: #FFD700;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 800;
-    font-size: 0.9rem;
-}
-
-.price-label {
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.pricing-card.featured .price-label {
-    color: white;
-}
-
-.price {
-    font-size: 4rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: #FF6B35;
-}
-
-.pricing-card.featured .price {
-    color: white;
-}
-
-.price span {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.setup-fee, .regular-price {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    opacity: 0.8;
-}
-
-.regular-price {
-    text-decoration: line-through;
-}
-
-.pricing-card ul {
-    list-style: none;
-    text-align: left;
-    margin: 30px 0;
-}
-
-.pricing-card li {
-    padding: 12px 0;
-    font-size: 1.1rem;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.pricing-card.featured li {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
-.btn-price {
-    display: inline-block;
-    padding: 18px 50px;
-    background: #FF6B35;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-}
-
-.btn-price:hover {
-    background: #FF8C42;
-    transform: scale(1.05);
-}
-
-.pricing-card.featured .btn-price {
-    background: white;
-    color: #FF6B35;
-}
-
-.pricing-card.featured .btn-price:hover {
-    background: #f0f0f0;
-}
-
-/* Header Styles */
-.site-header {
-    background: white;
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.site-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.agency-name {
-    font-size: 1.8rem;
-    color: #FF6B35;
-    margin: 0;
-}
-
-.agency-tagline {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 5px 0 0 0;
-}
-
-.header-phone {
-    background: #FF6B35;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-
-.header-phone:hover {
-    background: #FF8C42;
-    transform: scale(1.05);
-}
-
-/* About Folsom Section */
-.about-folsom {
-    padding: 80px 20px;
-    background: #f9f9f9;
-}
-
-.about-folsom h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.about-folsom .intro {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 50px;
-}
-
-.accordion {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.accordion-item {
-    background: white;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.accordion-header {
-    width: 100%;
-    padding: 20px 25px;
-    background: white;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #333;
-    transition: all 0.3s ease;
-}
-
-.accordion-header:hover {
-    background: #f9f9f9;
-    color: #FF6B35;
-}
-
-.accordion-icon {
-    transition: transform 0.3s ease;
-    color: #FF6B35;
-    font-size: 0.8rem;
-}
-
-.accordion-item.active .accordion-icon {
-    transform: rotate(180deg);
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding: 0 25px;
-}
-
-.accordion-item.active .accordion-content {
-    max-height: 1000px;
-    padding: 0 25px 25px;
-}
-
-.accordion-content p {
-    margin-bottom: 15px;
-    line-height: 1.8;
-    color: #555;
-}
-
-.accordion-content ul {
-    margin: 15px 0;
-    padding-left: 20px;
-}
-
-.accordion-content li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-    color: #555;
-  /* Logo Styles */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-image {
-    height: 50px;
-    width: auto;
-    max-width: 200px;
-}
-
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-    .site-header .container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    
-    .logo {
-        width: 100%;
-    }
-    
-    .logo-image {
-        height: 40px;
-        max-width: 150px;
-    }
-    
-    .agency-name {
-        font-size: 1.2rem;
-    }
-    
-    .agency-tagline {
-        font-size: 0.75rem;
-    }
-    
-    .header-phone {
-        font-size: 14px;
-        padding: 10px 20px;
-        width: 100%;
-        text-align: center;
-        display: block;
-    }
-}
-    </style>
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Standard Local SEO Agency | Sacramento AI-Powered Local Search Experts</title>
-    <meta name="description" content="Sacramento's premier local SEO agency helping Folsom businesses dominate Google Maps & local search with AI-powered solutions. Get more customers, calls, and revenue.">
+    <title>A.Eye Monster | Folsom's #1 AI Receptionist & Local SEO Dominance</title>
     
-    <!-- Schema Markup -->
+    <meta name="description" content="A.Eye Monster is the AI automation department of Gold Standard Local SEO. 100% Done-For-You AI Receptionists and Maps Domination.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@400;800&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Gold Standard Local SEO Agency",
-      "image": "https://lh3.googleusercontent.com/p/AF1QipNa5A9yZjDM_wYQO0FPm8qW4xB0Zq8LkZ8L5g7g",
-      "@id": "https://maps.google.com/?cid=7895656689241912038",
-      "url": "https://www.gslocalseo.com",
+      "name": "Gold Standard Local SEO",
+      "alternateName": "A.Eye Monster",
+      "description": "Sacramento's premier SEO agency and AI automation department specializing in 100% DFY Voice Agents.",
+      "url": "https://aeye.monster",
       "telephone": "+1-916-234-3457",
-      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "705 Gold Lake Dr. Suite 250",
-        "addressLocality": "Sacramento",
+        "addressLocality": "Folsom",
         "addressRegion": "CA",
-        "postalCode": "95826",
+        "postalCode": "95630",
         "addressCountry": "US"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 38.6778144,
-        "longitude": -121.1792115
+        "latitude": 38.6778,
+        "longitude": -121.1792
       },
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "17:00"
-      }],
-      "sameAs": [
-        "https://maps.app.goo.gl/rttSPrX4csDN9ZbV8",
-        "https://aeye.monster"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "47"
+      "department": {
+        "@type": "Service",
+        "name": "A.Eye Monster AI Department",
+        "serviceType": "AI Voice Assistants & Automation"
       }
     }
     </script>
+
+    <style>
+        :root {
+            --neon-green: #00ff88;
+            --electric-blue: #00d4ff;
+            --dark-bg: #03070a;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --monster-gradient: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background: var(--dark-bg); color: #fff; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; line-height: 1.6; }
+
+        .mesh-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 10% 10%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 90% 90%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        header {
+            padding: 25px 5%; display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(20px); position: fixed; top: 0; width: 100%; z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.8rem; letter-spacing: -1.5px; }
+        .logo span { color: var(--neon-green); text-shadow: 0 0 20px rgba(0,255,136,0.5); }
+
+        .btn-nav { background: var(--monster-gradient); padding: 10px 25px; border-radius: 50px; color: #000; font-weight: 700; text-decoration: none; font-size: 0.9rem; }
+
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 10% 60px; }
+        .hero h1 { font-family: 'Outfit', sans-serif; font-size: clamp(3rem, 10vw, 6rem); line-height: 0.9; margin-bottom: 30px; font-weight: 800; }
+        .text-reveal { background: linear-gradient(to bottom, #fff 40%, rgba(255,255,255,0.4)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.3rem; max-width: 700px; color: #88929b; margin-bottom: 40px; }
+
+        .vsl-container { margin: 40px auto; max-width: 850px; width: 100%; position: relative; cursor: pointer; }
+        #video-placeholder { border-radius: 24px; overflow: hidden; border: 2px solid var(--glass-border); position: relative; transition: 0.4s; }
+        .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 2; }
+        .play-button { width: 80px; height: 80px; background: var(--monster-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(0,255,136,0.6); }
+
+        .section { padding: 100px 5%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1300px; margin: 0 auto; }
+        .glass-card { background: var(--glass); border: 1px solid var(--glass-border); padding: 40px; border-radius: 32px; backdrop-filter: blur(15px); transition: 0.4s; }
+        .glass-card:hover { border-color: var(--neon-green); transform: translateY(-10px); }
+
+        .btn-primary { padding: 20px 50px; background: #fff; color: #000; font-weight: 700; border-radius: 100px; text-decoration: none; display: inline-block; transition: 0.3s; }
+        
+        .intel-hub { background: rgba(255,255,255,0.02); border-radius: 40px; padding: 60px; margin-top: 50px; border: 1px solid var(--glass-border); }
+        .price-highlight { border: 2px solid var(--neon-green); text-align: center; }
+    </style>
 </head>
 <body>
-      <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                              <img src="logo.png" alt="Gold Standard Local SEO Logo" class="logo-image">
-                <h1 class="agency-name">Gold Standard Local SEO</h1>
-                <p class="agency-tagline">Sacramento's #1 Local Search Experts</p>
-            </div>
-            <nav>
-                <a href="tel:+19162343457" class="header-phone">📞 (916) 234-3457</a>
-            </nav>
-        </div>
+    <div class="mesh-bg"></div>
+    <header>
+        <div class="logo">A.EYE <span>MONSTER</span></div>
+        <a href="tel:+19162343457" class="btn-nav">(916) 234-3457</a>
     </header>
-    <!-- Hero Section -->
+
     <section class="hero">
-        <div class="container">
-            <h1>🤖 Transform Your Folsom Business with AI-Powered Local SEO</h1>
-            <p class="tagline">Sacramento's #1 Local Search Agency • Dominate Google Maps & Get More Customers</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn-primary">Get Your Free SEO Audit</a>
-                <a href="tel:+19162343457" class="btn-secondary">📞 (916) 234-3457</a>
+        <h1><span class="text-reveal">Monster</span> <br>Intelligence.</h1>
+        <p>Powered by <strong>Gold Standard Local SEO</strong>. 100% Done-For-You AI Voice Receptionists for market takeover.</p>
+        
+        <div class="vsl-container" onclick="playMonsterVideo()">
+            <div id="video-placeholder">
+                <div class="video-overlay"><div class="play-button"><span style="border-style: solid; border-width: 15px 0 15px 25px; border-color: transparent transparent transparent #000; margin-left: 5px;"></span></div></div>
+                <img src="https://img.youtube.com/vi/ew8JKNq8gZI/maxresdefault.jpg" style="width:100%; display:block;">
             </div>
-            <div class="trust-badges">
-                <span>⭐⭐⭐⭐⭐ 5.0 Rating</span>
-                <span>47+ Happy Clients</span>
-                <span>100% ROI Guaranteed</span>
-            </div>
+            <div id="monster-player" style="display:none;"></div>
+        </div>
+
+        <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+            <a href="https://aeye.monster" class="btn-primary">Launch AI Agent</a>
+            <a href="https://cal.com/justin-davis-cthnjb/30min" class="btn-primary" style="background:transparent; color:#fff; border:1px solid #fff;">Book 30-Min Audit</a>
         </div>
     </section>
 
-    <!-- Problem/Solution Section -->
-    <section class="problem-solution">
-        <div class="container">
-            <h2>Are You Invisible on Google Maps?</h2>
-            <div class="problems">
-                <div class="problem-card">
-                    <h3>❌ Lost in Search Results</h3>
-                    <p>Your competitors show up first while your business is buried on page 3</p>
+    <section class="section" id="intel">
+        <h2 style="text-align:center; font-size:3rem; margin-bottom:40px;">Folsom Intel Hub</h2>
+        <div class="intel-hub">
+            <div class="grid">
+                <div>
+                    <h3>📍 Gold Standard SEO</h3>
+                    <p>Expert local ranking strategies for Sutter Street, Folsom Lake, and the Broadstone corridor.</p>
                 </div>
-                <div class="problem-card">
-                    <h3>❌ No Phone Calls</h3>
-                    <p>Your phone isn't ringing because customers can't find you online</p>
-                </div>
-                <div class="problem-card">
-                    <h3>❌ Missing Revenue</h3>
-                    <p>Every day you're not #1 on Google Maps costs you thousands in lost sales</p>
-                </div>
-            </div>
-            
-            <div class="solution">
-                <h2>✅ We Fix This With AI-Powered Local SEO</h2>
-                <p class="big-text">Get to the top of Google Maps, dominate local search, and watch your phone ring off the hook.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Special Offer Section -->
-    <section class="special-offer">
-        <div class="container">
-            <div class="offer-badge">🔥 LIMITED TIME OFFER</div>
-            <h2>Monster AI Receptionist - Never Miss a Lead Again</h2>
-            <p class="offer-subtitle">Powered by A.Eye Monster Technology</p>
-            
-            <div class="pricing-options">
-                <div class="pricing-card">
-                    <div class="price-label">MONTHLY</div>
-                    <div class="price">$497<span>/month</span></div>
-                    <p class="setup-fee">+ $497 setup fee</p>
-                    <ul>
-                        <li>✅ 24/7 AI Phone Answering</li>
-                        <li>✅ Automatic Appointment Booking</li>
-                        <li>✅ Lead Qualification & Routing</li>
-                        <li>✅ SMS & Email Follow-ups</li>
-                        <li>✅ CRM Integration</li>
-                    </ul>
-                    <a href="https://aeye.monster" class="btn-price">Get Started Monthly</a>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <div class="save-badge">SAVE 50%</div>
-                    <div class="price-label">ANNUAL (BEST VALUE)</div>
-                    <div class="price">$2,997<span>/year</span></div>
-                    <p class="regular-price">Regular: /sales$5,994/year</p>
-                    <ul>
-                        <li>✅ Everything in Monthly</li>
-                        <li>✅ Priority Support</li>
-                        <li>✅ Advanced Analytics</li>
-                        <li>✅ Custom Integrations</li>
-                        <li>✅ Dedicated Account Manager</li>
-                    </ul>
-                    <a href="https://aeye.monster" /salesclass="btn-price">Get 50% Off Annual</a>
+                <div>
+                    <h3>🚀 AI Department</h3>
+                    <p>A.Eye Monster handles the "Speed to Lead" gap with instant 24/7 Voice & Chat automation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2>Our AI-Powered Services</h2>
-            <p class="section-subtitle">Powered by A.Eye Monster Technology</p>
-            
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="icon">🗺️</div>
-                    <h3>Google Maps Domination</h3>
-                    <p>Get your business to the top of Google Maps for all your money-making keywords.</p>
-                    <ul>
-                        <li>GBP optimization & management</li>
-                        <li>Review generation & management</li>
-                        <li>Local keyword ranking</li>
-                        <li>Map pack positioning</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card featured">
-                    <div class="badge">NEW! AI-Powered</div>
-                    <div class="icon">🤖</div>
-                    <h3>24/7 AI Chatbots & Voice Assistants</h3>
-                    <p>Never miss a lead again. Our AI assistants answer calls, respond to messages, and book appointments while you sleep.</p>
-                    <ul>
-                        <li>Instant website chat responses</li>
-                        <li>AI phone answering service</li>
-                        <li>Automatic appointment booking</li>
-                        <li>SMS & email follow-up</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="icon">⚡</div>
-                    <h3>Workflow Automation</h3>
-                    <p>Automate your entire customer journey from first contact to paying customer.</p>
-                    <ul>
-                        <li>Lead capture & nurturing</li>
-                        <li>Automated follow-ups</li>
-                        <li>CRM integration</li>
-                        <li>Sales pipeline automation</li>
-                    </ul>
-                </div>
+    <footer style="padding: 80px 5%; border-top: 1px solid var(--glass-border);">
+        <div class="grid">
+            <div>
+                <div class="logo">A.EYE <span>MONSTER</span></div>
+                <p>An AI Department of Gold Standard Local SEO. Founded by Justin Davis.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Dominate Local Search?</h2>
-            <p class="big-text">Get your free SEO audit and discover how much money you're leaving on the table.</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn-primary">Get Free SEO Audit Now</a>
-                <a href="tel:+19162343457" class="btn-secondary">📞 (916) 234-3457</a>
+            <div>
+                <h4>Contact</h4>
+                <p>705 Gold Lake Dr. Suite 250, Folsom, CA 95630</p>
+                <p>(916) 234-3457</p>
             </div>
-            <p class="guarantee">No obligation. No pressure. Just real insights about your business.</p>
-        </div>
-    </section>
-
-  
-    <!-- About Folsom Section -->
-    <section class="about-folsom">
-        <div class="container">
-            <h2>📍 About Folsom, CA</h2>
-            <p class="intro">Serving California's historic gold rush city with cutting-edge local SEO solutions</p>
-            
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span>Area Overview</span>
-                        <span class="accordion-icon">▼</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Folsom is a vibrant city in Sacramento County, California, known for its rich Gold Rush history and modern tech-savvy business environment. Home to over 80,000 residents, Folsom combines small-town charm with big-city opportunities. The city's diverse economy includes technology, healthcare, retail, and professional services, making it an ideal location for local SEO services.</p>
-                        <p>With Folsom Lake nearby and historic Sutter Street downtown, local businesses benefit from both tourist traffic and a strong residential customer base. The city's high median income and educated population create prime conditions for businesses seeking to dominate local search results.</p>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span>Key Landmarks & Places</span>
-                        <span class="accordion-icon">▼</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Folsom features several prominent landmarks that drive local business opportunities:</p>
-                        <ul>
-                            <li><strong>Historic Folsom</strong> - Sutter Street's shopping district attracts thousands of visitors monthly</li>
-                            <li><strong>Folsom Lake</strong> - Major recreation destination generating year-round tourism</li>
-                            <li><strong>Folsom Premium Outlets</strong> - High-traffic retail center with 80+ stores</li>
-                            <li><strong>Intel Campus</strong> - Major employer driving professional services demand</li>
-                            <li><strong>Folsom City Zoo Sanctuary</strong> - Family-friendly attraction boosting local foot traffic</li>
-                            <li><strong>Johnny Cash Trail</strong> - Popular 2.5-mile walking/biking path along Lake Natoma</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span>Nearby Cities</span>
-                        <span class="accordion-icon">▼</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Gold Standard Local SEO serves Folsom and surrounding Sacramento County communities:</p>
-                        <ul>
-                            <li>El Dorado Hills (5 miles east)</li>
-                            <li>Rancho Cordova (8 miles west)</li>
-                            <li>Roseville (12 miles north)</li>
-                            <li>Sacramento (20 miles west)</li>
-                            <li>Orangevale (10 miles northwest)</li>
-                            <li>Fair Oaks (12 miles northwest)</li>
-                            <li>Granite Bay (15 miles north)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span>Transportation & Accessibility</span>
-                        <span class="accordion-icon">▼</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Folsom's strategic location and transportation infrastructure make it easily accessible:</p>
-                        <ul>
-                            <li><strong>Highway 50</strong> - Direct freeway access to Sacramento and Lake Tahoe</li>
-                            <li><strong>Folsom Light Rail Station</strong> - Gold Line connects to downtown Sacramento</li>
-                            <li><strong>El Dorado Transit</strong> - Public bus system serving Folsom and El Dorado County</li>
-                            <li><strong>Bike-Friendly City</strong> - 50+ miles of dedicated bike trails and lanes</li>
-                            <li><strong>Sacramento International Airport</strong> - 35 minutes away for business travelers</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span>Our Local SEO Services in Folsom</span>
-                        <span class="accordion-icon">▼</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Gold Standard Local SEO specializes in helping Folsom businesses dominate Google Maps and local search results. Our proven strategies help you outrank competitors and capture high-intent customers searching for:</p>
-                        <ul>
-                            <li>"Folsom [your service]" - Capture local search traffic</li>
-                            <li>"Near me" searches - Dominate mobile local results</li>
-                            <li>"Best [service] in Folsom" - Win top comparison searches</li>
-                            <li>Google Maps 3-pack positioning - Get maximum visibility</li>
-                        </ul>
-                        <p><strong>Folsom Business Statistics:</strong></p>
-                        <ul>
-                            <li>Over 3,200 registered businesses in Folsom</li>
-                            <li>$125,000+ median household income (above national average)</li>
-                            <li>92% of consumers search online before visiting local businesses</li>
-                            <li>86% of Folsom residents use smartphones for local searches</li>
-                        </ul>
-                    </div>
-                </div>
+            <div>
+                <h4>Trust</h4>
+                <p>⭐⭐⭐⭐⭐ 5.0 Rating</p>
+                <p>30-Day Money-Back Guarantee</p>
             </div>
-        </div>
-    </section>
-  
-  <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Let's Get Started</h2>
-            <div class="contact-info">
-                <div class="info-item">
-                    <strong>📞 Phone:</strong>
-                    <a href="tel:+19162343457">(916) 234-3457</a>
-                </div>
-                <div class="info-item">
-                    <strong>📧 Email:</strong>
-                    <a href="mailto:contact@aeye.monster">contact@aeye.monster</a>
-                </div>
-                <div class="info-item">
-                    <strong>📍 Address:</strong>
-                    <span>705 Gold Lake Dr. Suite 250, Folsom, CA 95630</span>
-                </div>
-                <div class="info-item">
-                    <strong>⏰ Hours:</strong>
-<span>Mon-Fri: 9:00 AM - 6:00 PM</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Gold Standard Local SEO Agency. All Rights Reserved.</p>
-            <p>Powered by <a href="https://aeye.monster" target="_blank">A.Eye Monster</a> Technology</p>
         </div>
     </footer>
 
-      <!-- AI Voice Chatbot Widget -->
-      <link rel="stylesheet" href="https://sidewidget.vercel.app/react-widget-uv.css">
-      <script>
-              window.process = { env: {} };
-            </script>
-      <script src="https://sidewidget.vercel.app/react-widget-uv.iife.js"></script>
-      <react-widget-uv agent_id="70947624-6a7a-41f7-a0ed-46481055a68d" schema="bb32f05d-3173-4cac-9ac9-856c7657fb97" type="customwidget"></react-widget-uv>
+    <link rel="stylesheet" href="https://sidewidget.vercel.app/react-widget-uv.css">
+    <script>window.process = { env: {} }; function playMonsterVideo() { const p = document.getElementById('video-placeholder'); const m = document.getElementById('monster-player'); m.innerHTML = '<iframe width="100%" height="480" src="https://www.youtube.com/embed/ew8JKNq8gZI?autoplay=1" frameborder="0" allowfullscreen style="border-radius:24px;"></iframe>'; p.style.display='none'; m.style.display='block'; }</script>
+    <script src="https://sidewidget.vercel.app/react-widget-uv.iife.js"></script>
+    <react-widget-uv agent_id="70947624-6a7a-41f7-a0ed-46481055a68d" schema="bb32f05d-3173-4cac-9ac9-856c7657fb97" type="customwidget"></react-widget-uv>
 </body>
-</html>
-    <script  src="./script.js"></script>
-
-  </body>
-  
 </html>
