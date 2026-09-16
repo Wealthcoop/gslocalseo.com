@@ -842,6 +842,223 @@
       margin-bottom: 18px;
     }
 
+    /* Verified AI Growth Toolkit & Free HubSpot Snapshot */
+    .toolkit-section {
+      background: radial-gradient(circle at 50% 0%, rgba(15, 23, 42, 0.95), var(--bg-main));
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .toolkit-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .toolkit-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .toolkit-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.4);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    }
+
+    .toolkit-card-featured {
+      grid-column: span 12;
+      background: linear-gradient(135deg, rgba(26, 32, 44, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.55);
+      box-shadow: 0 10px 40px rgba(212, 175, 55, 0.12);
+    }
+
+    .toolkit-featured-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .toolkit-card-col {
+      grid-column: span 4;
+    }
+
+    .toolkit-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+
+    .toolkit-badge-gold {
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold-light);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .toolkit-badge-cyan {
+      background: rgba(0, 242, 254, 0.1);
+      color: var(--cyan-light);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+    }
+
+    .toolkit-badge-purple {
+      background: rgba(168, 85, 247, 0.12);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.35);
+    }
+
+    .toolkit-badge-blue {
+      background: rgba(59, 130, 246, 0.12);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+    }
+
+    .toolkit-icon-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .toolkit-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      flex-shrink: 0;
+    }
+
+    .toolkit-card h3 {
+      font-size: 1.3rem;
+      color: var(--text-white);
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .toolkit-card p {
+      font-size: 0.92rem;
+      color: var(--text-slate);
+      line-height: 1.6;
+      margin: 12px 0 16px 0;
+    }
+
+    .toolkit-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .toolkit-feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .toolkit-feature-list li svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold-light);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .toolkit-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .toolkit-btn-gold {
+      background: linear-gradient(135deg, var(--gold-main) 0%, var(--gold-dark) 100%);
+      color: #000;
+    }
+    .toolkit-btn-gold:hover {
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .toolkit-btn-outline {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-white);
+    }
+    .toolkit-btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--gold-light);
+      color: var(--gold-light);
+    }
+
+    .snapshot-box {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .snapshot-box h4 {
+      font-size: 1.15rem;
+      color: var(--gold-light);
+      margin: 0 0 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .snapshot-box p {
+      font-size: 0.88rem;
+      color: var(--text-slate);
+      margin: 0 0 16px 0;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 992px) {
+      .toolkit-featured-layout { grid-template-columns: 1fr; gap: 24px; }
+      .toolkit-card-col { grid-column: span 6; }
+    }
+
+    @media (max-width: 640px) {
+      .toolkit-card-col { grid-column: span 12; }
+      .toolkit-card { padding: 22px; }
+    }
+
     /* Headquarters & Local Presence Section */
     .hq-grid {
       display: grid;
@@ -2219,6 +2436,7 @@
       </a>
       <div class="nav-links">
         <a href="#services">Services</a>
+        <a href="#ai-toolkit" style="color: #38bdf8; font-weight: 600;">⚡ AI Toolkit</a>
         <a href="#folsom-anchor">Folsom 3-Pack</a>
         <a href="#local-facts">Civic Facts</a>
         <a href="#headquarters">Headquarters</a>
@@ -2715,6 +2933,199 @@
           <div class="credit-note">Zero-Risk Implementation Credit</div>
           <a href="tel:9162343457" class="btn-primary" style="width: 100%; justify-content: center;">
             Book Assessment: (916) 234-3457
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified AI Growth Toolkit & Free HubSpot Snapshot Section -->
+  <section id="ai-toolkit" class="toolkit-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-gold">VERIFIED AUTOMATION STACK &amp; FREE ASSETS</div>
+        <h2>The AI Growth Toolkit for Local Businesses &amp; High-Velocity Teams</h2>
+        <p>
+          We don't keep our tech stack behind closed doors. These are the four primary software engines we deploy to automate lead capture, eliminate administrative bloat, and scale regional operations without increasing payroll.
+        </p>
+      </div>
+
+      <div class="toolkit-grid">
+        <!-- Featured Card: HubSpot CRM + Free Speed-to-Lead Snapshot -->
+        <div class="toolkit-card toolkit-card-featured">
+          <div class="toolkit-featured-layout">
+            <div>
+              <div class="toolkit-badge toolkit-badge-gold">👑 OFFICIAL PARTNER &bull; 100% FREE BLUEPRINT</div>
+              <div class="toolkit-icon-header">
+                <div class="toolkit-icon-box" style="background: rgba(255, 122, 89, 0.15); border-color: rgba(255, 122, 89, 0.4); color: #ff7a59;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.8 7.3c-.6 0-1.1.2-1.6.5l-2.6-1.6c.1-.4.2-.8.2-1.2 0-2.2-1.8-4-4-4s-4 1.8-4 4c0 .4.1.8.2 1.2L4.4 7.8c-.5-.3-1-.5-1.6-.5-1.7 0-3 1.3-3 3s1.3 3 3 3c.6 0 1.1-.2 1.6-.5l2.6 1.6c-.1.4-.2.8-.2 1.2 0 2.2 1.8 4 4 4s4-1.8 4-4c0-.4-.1-.8-.2-1.2l2.6-1.6c.5.3 1 .5 1.6.5 1.7 0 3-1.3 3-3s-1.3-3-3-3zm-8 1.7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                </div>
+                <div>
+                  <h3 style="font-size: 1.45rem;">HubSpot CRM + 1-Click Speed-to-Lead Snapshot</h3>
+                  <div style="font-size: 0.8rem; color: #ff7a59; font-weight: 700;">Official Agency Partner Referral</div>
+                </div>
+              </div>
+              <p>
+                The industry-standard CRM for modern service operators. Centralize phone inquiries, manage pipeline stages from first call to final invoice, and trigger instant SMS/email follow-ups automatically.
+              </p>
+              <ul class="toolkit-feature-list">
+                <li>
+                  <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span><b>100% Free Tier:</b> Start without paying a dime, scale to Sales Hub as deal volume grows.</span>
+                </li>
+                <li>
+                  <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span><b>Mobile Dispatch App:</b> Manage customer records and dial directly from iOS/Android.</span>
+                </li>
+              </ul>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
+                <a href="https://go.try-hubspot.com/n4eB9" target="_blank" rel="noopener sponsored" class="toolkit-action-btn toolkit-btn-gold" style="width: auto; padding: 13px 24px;">
+                  ⚡ Create Free HubSpot Account (Partner Link) &rarr;
+                </a>
+                <button type="button" onclick="openSnapshotModal()" class="toolkit-action-btn toolkit-btn-outline" style="width: auto; padding: 13px 20px; border-color: rgba(212, 175, 55, 0.4); color: var(--gold-light);">
+                  🎁 Claim Free Snapshot Blueprint &rarr;
+                </button>
+              </div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">
+                *Partner activation link ensures 1-click snapshot template compatibility with free and paid tiers.
+              </div>
+            </div>
+
+            <!-- Free Snapshot Highlight Box -->
+            <div class="snapshot-box">
+              <h4>
+                <span>🎁 Free Giveaway</span>
+                <span style="font-size: 0.75rem; font-weight: 700; background: rgba(212, 175, 55, 0.2); color: var(--gold-light); padding: 2px 8px; border-radius: 4px;">$497 VALUE</span>
+              </h4>
+              <p>
+                Download our production-tested <b>6-Stage Local Speed-to-Lead Snapshot</b> and import it straight into your HubSpot portal in under 5 minutes:
+              </p>
+              <ul class="toolkit-feature-list" style="margin-bottom: 16px;">
+                <li>
+                  <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>Pre-built stages: <i>New Lead &rarr; &lt;60s Contact &rarr; Estimate &rarr; Won &rarr; Review</i></span>
+                </li>
+                <li>
+                  <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>Google Maps CID &amp; Local UTM tracking property definitions</span>
+                </li>
+                <li>
+                  <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>Step-by-step PDF installation guide for free/paid tiers</span>
+                </li>
+              </ul>
+              <button type="button" onclick="openSnapshotModal()" class="toolkit-action-btn toolkit-btn-outline" style="width: 100%; justify-content: center; background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.4); color: var(--gold-light);">
+                📥 Download Free Blueprint &amp; Snapshot Guide
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 2: Make.com -->
+        <div class="toolkit-card toolkit-card-col">
+          <div>
+            <div class="toolkit-badge toolkit-badge-purple">VISUAL WORKFLOW AUTOMATION</div>
+            <div class="toolkit-icon-header">
+              <div class="toolkit-icon-box" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.35); color: #c084fc;">
+                ⚡
+              </div>
+              <div>
+                <h3>Make.com</h3>
+                <div style="font-size: 0.8rem; color: #c084fc; font-weight: 600;">No-Code Integration Core</div>
+              </div>
+            </div>
+            <p>
+              Connect website forms, phone call webhooks, Google Business Profile notifications, and CRM updates in real time without writing code.
+            </p>
+            <ul class="toolkit-feature-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Instant webhooks for speed-to-lead routing</span>
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Visual drag-and-drop scenario designer</span>
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Cost-effective alternative to Zapier</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://www.make.com/en/register?pc=wealthcoop" target="_blank" rel="noopener sponsored" class="toolkit-action-btn toolkit-btn-outline">
+            Try Make Free &rarr;
+          </a>
+        </div>
+
+        <!-- Tool 3: Notion + Notion AI -->
+        <div class="toolkit-card toolkit-card-col">
+          <div>
+            <div class="toolkit-badge toolkit-badge-blue">WORKSPACE &amp; SOPS</div>
+            <div class="toolkit-icon-header">
+              <div class="toolkit-icon-box" style="background: rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.35); color: #60a5fa;">
+                📝
+              </div>
+              <div>
+                <h3>Notion + Notion AI</h3>
+                <div style="font-size: 0.8rem; color: #60a5fa; font-weight: 600;">Team OS &amp; Knowledge Base</div>
+              </div>
+            </div>
+            <p>
+              The single workspace to centralize client accounts, technician operating procedures, marketing calendars, and meeting summaries.
+            </p>
+            <ul class="toolkit-feature-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automated AI meeting summaries &amp; tasks</span>
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Clean field checklists &amp; dispatch wikis</span>
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Cross-device real-time collaboration</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://www.notion.so" target="_blank" rel="noopener sponsored" class="toolkit-action-btn toolkit-btn-outline">
+            Explore Notion Free &rarr;
+          </a>
+        </div>
+
+        <!-- Tool 4: ElevenLabs & HeyGen -->
+        <div class="toolkit-card toolkit-card-col">
+          <div>
+            <div class="toolkit-badge toolkit-badge-cyan">VOICE &amp; VIDEO SYNTHESIS</div>
+            <div class="toolkit-icon-header">
+              <div class="toolkit-icon-box" style="background: rgba(0, 242, 254, 0.15); border-color: rgba(0, 242, 254, 0.35); color: var(--cyan-light);">
+                🎙️
+              </div>
+              <div>
+                <h3>ElevenLabs &amp; HeyGen</h3>
+                <div style="font-size: 0.8rem; color: var(--cyan-light); font-weight: 600;">Media &amp; Telephony Generation</div>
+              </div>
+            </div>
+            <p>
+              Produce studio-grade localized promotional videos, realistic video avatars, and natural voice telephony models in minutes.
+            </p>
+            <ul class="toolkit-feature-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Ultra-low latency conversational speech models</span>
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Photorealistic AI avatars for local web video</span>
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Zero camera equipment or studio overhead</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://elevenlabs.io" target="_blank" rel="noopener sponsored" class="toolkit-action-btn toolkit-btn-outline">
+            Launch AI Studio Free &rarr;
           </a>
         </div>
       </div>
@@ -3294,7 +3705,79 @@
     if (document.readyState !== 'loading') {
       updateRoiCalc();
     }
+
+    /* HubSpot Snapshot Modal Functions */
+    function openSnapshotModal() {
+      const m = document.getElementById('snapshotModal');
+      if (m) { m.style.display = 'flex'; }
+    }
+    function closeSnapshotModal() {
+      const m = document.getElementById('snapshotModal');
+      if (m) { m.style.display = 'none'; }
+    }
+    function handleSnapshotSubmit(e) {
+      e.preventDefault();
+      document.getElementById('snapshotClaimForm').style.display = 'none';
+      document.getElementById('snapSuccessMessage').style.display = 'block';
+      setTimeout(function() {
+        window.open('https://go.try-hubspot.com/n4eB9', '_blank');
+      }, 1000);
+    }
   </script>
+
+  <!-- Interactive HubSpot Snapshot Claim Modal -->
+  <div id="snapshotModal" style="display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: var(--bg-surface); border: 1.5px solid rgba(212, 175, 55, 0.5); border-radius: 20px; max-width: 520px; width: 100%; padding: 32px; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+      <button type="button" onclick="closeSnapshotModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; line-height: 1;">&times;</button>
+      <div style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 800; background: rgba(212, 175, 55, 0.15); color: var(--gold-light); border: 1px solid rgba(212, 175, 55, 0.4); padding: 4px 10px; border-radius: 9999px; margin-bottom: 12px; text-transform: uppercase;">
+        🎁 100% Free Instant Download
+      </div>
+      <h3 style="font-size: 1.5rem; color: #fff; margin: 0 0 8px 0;">Claim Your Free HubSpot Speed-to-Lead Snapshot</h3>
+      <p style="font-size: 0.9rem; color: var(--text-slate); line-height: 1.5; margin: 0 0 20px 0;">
+        Enter your details to receive the <b>6-Slide Playbook &amp; 1-Click Pipeline Import Guide</b>. Designed for contractors and local businesses to stop losing leads.
+      </p>
+
+      <form id="snapshotClaimForm" onsubmit="handleSnapshotSubmit(event)" style="display: flex; flex-direction: column; gap: 14px;">
+        <div>
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-slate); margin-bottom: 6px;">Your Name</label>
+          <input type="text" id="snapName" required placeholder="e.g. John Miller" style="width: 100%; padding: 12px 14px; border-radius: 8px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.95rem; outline: none;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-slate); margin-bottom: 6px;">Work Email</label>
+          <input type="email" id="snapEmail" required placeholder="e.g. john@yourcompany.com" style="width: 100%; padding: 12px 14px; border-radius: 8px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.95rem; outline: none;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-slate); margin-bottom: 6px;">Do you have a HubSpot account?</label>
+          <select id="snapHasHubspot" style="width: 100%; padding: 12px 14px; border-radius: 8px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.95rem; outline: none;">
+            <option value="no">Not yet (I need a free account)</option>
+            <option value="yes">Yes, I already have HubSpot</option>
+          </select>
+        </div>
+        <button type="submit" class="toolkit-action-btn toolkit-btn-gold" style="padding: 14px; font-size: 1rem; margin-top: 6px;">
+          ⚡ Download Snapshot &amp; Setup Free HubSpot &rarr;
+        </button>
+      </form>
+
+      <div id="snapSuccessMessage" style="display: none; text-align: center; padding: 20px 0;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🎉</div>
+        <h4 style="font-size: 1.3rem; color: var(--gold-light); margin: 0 0 10px 0;">Your Snapshot is Ready!</h4>
+        <p style="font-size: 0.9rem; color: var(--text-slate); margin-bottom: 20px; line-height: 1.5;">
+          Step 1: Activate your free HubSpot account via our partner link.<br/>
+          Step 2: Follow the 1-click import guide to install your pipeline.
+        </p>
+        <a href="https://go.try-hubspot.com/n4eB9" target="_blank" rel="noopener sponsored" class="toolkit-action-btn toolkit-btn-gold" style="margin-bottom: 10px;">
+          1. Create Free HubSpot Account (Partner Link) &rarr;
+        </a>
+        <a href="https://go.try-hubspot.com/n4eB9" target="_blank" class="toolkit-action-btn toolkit-btn-outline" style="border-color: rgba(212, 175, 55, 0.4); color: var(--gold-light);">
+          2. Open Speed-to-Lead Installation Guide (PDF) &rarr;
+        </a>
+      </div>
+
+      <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 14px;">
+        🔒 Zero spam. We protect your data. Instant access.
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
