@@ -63,13 +63,9 @@ All work across all repositories, pipelines, and configurations has been audited
 
 ---
 
-## 3. How to Resume After Antigravity Update
+## 4. Permanent Communications & Architecture Standards
+- **Telephony & SMS Provider:** **Telnyx** (Phone: `(916) 234-3457`). All call forwarding, SIP trunking, SMS notifications, and Voice AI integrations must exclusively use Telnyx. Twilio is strictly deprecated.
+- **Inbound Lead Alert Email:** **`goldstandardaiagency@gmail.com`** for all assessment requests, calculator submissions, and form leads.
+- **CRM Standard:** **HubSpot CRM** for contact records, pipeline management, and deal stages.
+- **Entity Relationship:** `Gold Standard Local SEO` (Parent Local Business, Folsom HQ, CID: `7895656689241912038`) <-> `Traffik Monster` (`traffik.monster`, Nationwide Remote AI & Enterprise Growth Arm).
 
-After updating Antigravity and reopening the project:
-1. Workspace root remains: `/Users/a/Downloads/Documents:Local SEO Maps`
-2. Run the Geo-Asset pipeline anytime via:
-   ```bash
-   python3 run_geo_pipeline.py --input <path_to_image_or_video> --city Folsom --heading "Your Section Heading"
-   ```
-3. Tailscale Node Reconnect (when you want to turn HAOS back on):
-   - On Windows PC (`goldclaw`): Run `wsl` &rarr; `sudo tailscale up` &rarr; turns `goldclaw-1` green.
