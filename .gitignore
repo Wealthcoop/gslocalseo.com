@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*$py.class
+vendor_py/
+.DS_Store
+geo_dist/
