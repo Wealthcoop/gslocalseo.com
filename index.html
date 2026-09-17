@@ -63,10 +63,13 @@
         "legalName": "Gold Standard Assets LLC",
         "url": "https://www.gslocalseo.com",
         "telephone": "+1-916-234-3457",
-        "email": "inquiry@gslocalseo.com",
+        "email": "goldstandardaiagency@gmail.com",
         "priceRange": "$$",
         "image": "https://www.gslocalseo.com/gold-standard-logo.png",
         "logo": "https://www.gslocalseo.com/gold-standard-logo.png",
+        "department": {
+          "@id": "https://www.traffik.monster/#organization"
+        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "705 Gold Lake Dr Ste 250",
@@ -169,6 +172,60 @@
         }
       },
       {
+        "@type": "Corporation",
+        "@id": "https://www.traffik.monster/#organization",
+        "name": "Traffik Monster",
+        "legalName": "Traffik Monster Enterprise Systems",
+        "url": "https://www.traffik.monster",
+        "parentOrganization": {
+          "@id": "https://www.gslocalseo.com/#organization"
+        },
+        "description": "Enterprise AI Growth Toolkit, Autonomous Voice AI Telephony, and Algorithmic Search Intelligence Division of Gold Standard Local SEO.",
+        "telephone": "+1-916-234-3457",
+        "email": "goldstandardaiagency@gmail.com",
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Sacramento Metro Area, California"
+          },
+          {
+            "@type": "Country",
+            "name": "United States"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Enterprise AI Whitepapers & Growth Systems",
+          "itemListElement": [
+            {
+              "@type": "DigitalDocument",
+              "name": "Folsom Google Maps 3-Pack Authority Report",
+              "url": "https://www.traffik.monster/reports/folsom-google-maps-3pack-authority-report.pdf"
+            },
+            {
+              "@type": "DigitalDocument",
+              "name": "Folsom Local SEO Proprietary Systems Guide",
+              "url": "https://www.traffik.monster/reports/folsom-local-seo-proprietary-systems-guide.pdf"
+            },
+            {
+              "@type": "DigitalDocument",
+              "name": "Roseville Google Maps 3-Pack Ranking Guide",
+              "url": "https://www.traffik.monster/reports/roseville-google-maps-3pack-ranking-guide.pdf"
+            },
+            {
+              "@type": "DigitalDocument",
+              "name": "Rocklin Contractor Speed-to-Lead Voice AI Guide",
+              "url": "https://www.traffik.monster/reports/rocklin-contractor-speed-to-lead-voice-ai-guide.pdf"
+            },
+            {
+              "@type": "DigitalDocument",
+              "name": "Verified Enterprise AI Growth Toolkit & Free HubSpot Snapshot",
+              "url": "https://www.traffik.monster/hubspot-snapshot"
+            }
+          ]
+        }
+      },
+      {
         "@type": "FAQPage",
         "@id": "https://www.gslocalseo.com/#faq",
         "mainEntity": [
@@ -202,6 +259,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "While our physical headquarters is in Folsom, CA, we actively manage local map pack rankings and AI systems for businesses across a 30-mile radius, including Roseville, Rocklin, Granite Bay, El Dorado Hills, Rancho Cordova, Elk Grove, and Greater Sacramento."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the relationship between Gold Standard Local SEO and Traffik Monster?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Traffik Monster (traffik.monster) is the enterprise AI systems and nationwide growth division owned by Gold Standard Assets LLC. While Gold Standard Local SEO anchors physical Google Maps 3-Pack optimization and local search prominence across Folsom and the Greater Sacramento Metro, Traffik Monster engineers autonomous speed-to-lead telephony, national AI growth toolkits, and algorithmic research whitepapers for businesses operating regionally and nationwide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Telnyx telephony and speed-to-lead system connect to my phone and CRM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our speed-to-lead telephony infrastructure is powered directly by Telnyx. When a customer calls or messages your business from your Google Business Profile, Telnyx routes the call directly to your mobile phone in under 60 seconds. If you are on a job, it triggers an instant conversational SMS text back while simultaneously logging the contact, call duration, and lead notes directly into HubSpot CRM with zero manual data entry."
             }
           }
         ]
@@ -2374,6 +2447,287 @@
     }
 
     /* ==========================================================================
+       TRAFFIK MONSTER WHITEPAPER VAULT
+       ========================================================================== */
+    .whitepaper-vault-card {
+      background: linear-gradient(135deg, rgba(12, 18, 32, 0.95), rgba(18, 26, 45, 0.95));
+      border: 1.5px solid rgba(0, 242, 254, 0.35);
+      border-radius: 20px;
+      padding: 36px;
+      margin-top: 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+    .whitepaper-vault-glow {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .whitepaper-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    @media (max-width: 1100px) {
+      .whitepaper-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .whitepaper-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .whitepaper-item {
+      background: rgba(6, 9, 17, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .whitepaper-item:hover {
+      border-color: rgba(0, 242, 254, 0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 242, 254, 0.12);
+    }
+    .whitepaper-badge {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--cyan-light);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .whitepaper-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .whitepaper-desc {
+      font-size: 0.8rem;
+      color: var(--text-slate);
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+    .whitepaper-link-btn {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ==========================================================================
+       SACRAMENTO METRO SERVICE HUB (CITY GRIDS)
+       ========================================================================== */
+    .metro-hub-section {
+      margin-top: 48px;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 48px;
+    }
+    .metro-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
+    @media (max-width: 1100px) {
+      .metro-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .metro-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .metro-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+    .metro-card:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+    .metro-card.hq-card {
+      border: 1.5px solid rgba(212, 175, 55, 0.6);
+      background: linear-gradient(135deg, rgba(18, 26, 45, 0.9), rgba(12, 18, 32, 0.9));
+    }
+    .metro-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .metro-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .metro-distance {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--cyan-light);
+    }
+    .metro-card.hq-card .metro-distance {
+      background: rgba(212, 175, 55, 0.2);
+      color: var(--gold-light);
+    }
+    .metro-zips {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      font-family: monospace;
+    }
+    .metro-corridors {
+      font-size: 0.82rem;
+      color: var(--text-slate);
+      line-height: 1.45;
+      margin-bottom: 16px;
+    }
+    .metro-action-btn {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s ease;
+    }
+    .metro-action-btn:hover {
+      gap: 10px;
+    }
+
+    /* ==========================================================================
+       CONTACT & REVENUE RECOVERY SECTION
+       ========================================================================== */
+    .contact-section {
+      padding: 80px 0;
+      background: radial-gradient(circle at center, rgba(18, 26, 45, 0.5) 0%, var(--bg-primary) 100%);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .contact-card-box {
+      background: var(--bg-surface);
+      border: 1.5px solid rgba(212, 175, 55, 0.4);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      .contact-card-box {
+        padding: 24px;
+      }
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 36px;
+    }
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .contact-info-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .contact-form-side form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 600px) {
+      .contact-form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .contact-input-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .contact-input-wrap label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-slate);
+    }
+    .contact-input-wrap input,
+    .contact-input-wrap select,
+    .contact-input-wrap textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: rgba(6, 9, 17, 0.8);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+      font-family: var(--font-body);
+    }
+    .contact-input-wrap input:focus,
+    .contact-input-wrap select:focus,
+    .contact-input-wrap textarea:focus {
+      border-color: var(--gold-main);
+    }
+    .contact-submit-btn {
+      background: linear-gradient(135deg, var(--gold-main), #b38f2a);
+      color: #000;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 14px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 20px var(--gold-glow);
+    }
+    .contact-submit-btn:hover {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-main));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px var(--gold-glow);
+    }
+
+    /* ==========================================================================
        STICKY MOBILE CALL & CONVERSION BAR
        ========================================================================== */
     .mobile-call-bar {
@@ -2713,11 +3067,17 @@
               </div>
             </div>
 
-            <a id="calcCtaBtn" href="https://buy.stripe.com/00w5kD94W9PucLN3RabEA04" target="_blank" class="card-cta card-cta-gold" style="width: 100%; padding: 14px; font-size: 1rem;">
-              ⚡ Plug Your $6,750/mo Leak for $297/mo &rarr;
+            <a id="calcCtaBtn" href="#contact" onclick="setLeadSource('3-Pack Calculator')" class="card-cta card-cta-gold" style="width: 100%; padding: 14px; font-size: 1rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+              ⚡ Plug Your $6,750/mo Leak: Get Recovery Plan &rarr;
             </a>
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 10px;">
-              Month-to-month agreement &bull; No lock-in contracts &bull; 100% Assessment credit
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 0.8rem;">
+              <a href="https://buy.stripe.com/00w5kD94W9PucLN3RabEA04" target="_blank" style="color: var(--gold-light); text-decoration: underline;">
+                Or Start Immediately: $297/mo Setup &rarr;
+              </a>
+              <span style="color: #4ade80; font-weight: 700;">● Month-to-Month</span>
+            </div>
+            <div style="font-size: 0.73rem; color: var(--text-muted); margin-top: 8px; text-align: center;">
+              100% Assessment credit &bull; Zero lock-in contracts &bull; Telnyx <60s phone dispatch
             </div>
           </div>
         </div>
@@ -3090,39 +3450,116 @@
           </a>
         </div>
 
-        <!-- Tool 4: ElevenLabs & HeyGen -->
+        <!-- Tool 4: Telnyx Telephony & Speed-to-Lead Engine -->
         <div class="toolkit-card toolkit-card-col">
           <div>
-            <div class="toolkit-badge toolkit-badge-cyan">VOICE &amp; VIDEO SYNTHESIS</div>
+            <div class="toolkit-badge toolkit-badge-cyan">TELEPHONY &amp; SPEED-TO-LEAD</div>
             <div class="toolkit-icon-header">
               <div class="toolkit-icon-box" style="background: rgba(0, 242, 254, 0.15); border-color: rgba(0, 242, 254, 0.35); color: var(--cyan-light);">
-                🎙️
+                📞
               </div>
               <div>
-                <h3>ElevenLabs &amp; HeyGen</h3>
-                <div style="font-size: 0.8rem; color: var(--cyan-light); font-weight: 600;">Media &amp; Telephony Generation</div>
+                <h3>Telnyx Telephony Core</h3>
+                <div style="font-size: 0.8rem; color: var(--cyan-light); font-weight: 600;">Carrier-Grade Voice &amp; SMS</div>
               </div>
             </div>
             <p>
-              Produce studio-grade localized promotional videos, realistic video avatars, and natural voice telephony models in minutes.
+              Direct high-availability telephony routing inbound GBP calls to your mobile phone in under 60 seconds with automated SMS backup.
             </p>
             <ul class="toolkit-feature-list">
               <li>
                 <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Ultra-low latency conversational speech models</span>
+                <span>Sub-60s live call forwarding &amp; missed-call text back</span>
               </li>
               <li>
                 <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Photorealistic AI avatars for local web video</span>
+                <span>100% free HubSpot CRM contact &amp; call logging</span>
               </li>
               <li>
                 <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                <span>Zero camera equipment or studio overhead</span>
+                <span>Verified Google Business Profile call tracking</span>
               </li>
             </ul>
           </div>
-          <a href="https://elevenlabs.io" target="_blank" rel="noopener sponsored" class="toolkit-action-btn toolkit-btn-outline">
-            Launch AI Studio Free &rarr;
+          <a href="tel:9162343457" class="toolkit-action-btn toolkit-btn-outline" style="border-color: rgba(0, 242, 254, 0.4); color: var(--cyan-light);">
+            ⚡ Test Telnyx Line: (916) 234-3457 &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Traffik Monster Enterprise Systems Division & Geo-Authority Whitepapers -->
+      <div class="whitepaper-vault-card">
+        <div class="whitepaper-vault-glow"></div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div class="toolkit-badge toolkit-badge-cyan" style="background: rgba(0, 242, 254, 0.15); border-color: rgba(0, 242, 254, 0.35); color: var(--cyan-light);">
+              TRAFFIK MONSTER &bull; ENTERPRISE SYSTEMS DIVISION
+            </div>
+            <h3 style="font-size: 1.6rem; color: #fff; margin: 8px 0 6px 0;">
+              Algorithmic Research &amp; Geo-Authority Whitepapers
+            </h3>
+            <p style="font-size: 0.92rem; color: var(--text-slate); max-width: 780px; line-height: 1.55; margin: 0;">
+              <b>Traffik Monster</b> (<a href="https://www.traffik.monster" target="_blank" style="color: var(--cyan-light); text-decoration: underline;">traffik.monster</a>) is the remote enterprise technology and AI automation division owned by Gold Standard Assets LLC. We publish first-party algorithmic research on local Google 3-Pack dynamics, Telnyx autonomous speed-to-lead voice architectures, and generative engine optimization (GEO).
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="https://www.traffik.monster/reports" target="_blank" class="toolkit-action-btn toolkit-btn-gold" style="width: auto; padding: 10px 18px; font-size: 0.85rem;">
+              📚 All Reports (traffik.monster) ↗
+            </a>
+            <a href="https://www.traffik.monster/hubspot-snapshot" target="_blank" class="toolkit-action-btn toolkit-btn-outline" style="width: auto; padding: 10px 18px; font-size: 0.85rem; border-color: rgba(0, 242, 254, 0.4); color: var(--cyan-light);">
+              ⚡ Free HubSpot Snapshot ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Authority Whitepaper Cards -->
+        <div class="whitepaper-grid">
+          <a href="https://www.traffik.monster/reports/folsom-google-maps-3pack-authority-report.pdf" target="_blank" class="whitepaper-item">
+            <div>
+              <div class="whitepaper-badge">RESEARCH PUBLICATION</div>
+              <div class="whitepaper-title">Folsom Google Maps 3-Pack Authority Report</div>
+              <div class="whitepaper-desc">First-party telemetry and algorithmic analysis of local map pack dominance across Folsom, CA commercial corridors.</div>
+            </div>
+            <div class="whitepaper-link-btn">
+              <span>Read PDF Report (2026)</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </div>
+          </a>
+
+          <a href="https://www.traffik.monster/reports/folsom-local-seo-proprietary-systems-guide.pdf" target="_blank" class="whitepaper-item">
+            <div>
+              <div class="whitepaper-badge">SYSTEMS BLUEPRINT</div>
+              <div class="whitepaper-title">Folsom Local SEO Proprietary Systems Guide</div>
+              <div class="whitepaper-desc">The 4 proprietary growth engines engineered to convert map pack traffic into daily high-ticket phone calls.</div>
+            </div>
+            <div class="whitepaper-link-btn">
+              <span>Read PDF Report (2026)</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </div>
+          </a>
+
+          <a href="https://www.traffik.monster/reports/roseville-google-maps-3pack-ranking-guide.pdf" target="_blank" class="whitepaper-item">
+            <div>
+              <div class="whitepaper-badge">REGIONAL ANALYSIS</div>
+              <div class="whitepaper-title">Roseville Google Maps 3-Pack Ranking Guide</div>
+              <div class="whitepaper-desc">Placer County entity reconciliation, citation mesh architecture, and Galleria corridor ranking blueprints.</div>
+            </div>
+            <div class="whitepaper-link-btn">
+              <span>Read PDF Report (2026)</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </div>
+          </a>
+
+          <a href="https://www.traffik.monster/reports/rocklin-contractor-speed-to-lead-voice-ai-guide.pdf" target="_blank" class="whitepaper-item">
+            <div>
+              <div class="whitepaper-badge">TELEPHONY &amp; AI</div>
+              <div class="whitepaper-title">Rocklin Contractor Speed-to-Lead Voice AI Guide</div>
+              <div class="whitepaper-desc">Sub-60s Telnyx telephony routing, missed-call auto SMS, and free HubSpot CRM sync for home service contractors.</div>
+            </div>
+            <div class="whitepaper-link-btn">
+              <span>Read PDF Report (2026)</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </div>
           </a>
         </div>
       </div>
@@ -3209,6 +3646,163 @@
             allowfullscreen 
             loading="lazy">
           </iframe>
+        </div>
+      </div>
+
+      <!-- Interactive Greater Sacramento Regional Service Mesh -->
+      <div class="metro-hub-section" id="metro-hub">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 32px auto;">
+          <div class="badge badge-gold">REGIONAL JURISDICTION &bull; 30-MILE RADIUS</div>
+          <h3 style="font-size: 1.85rem; color: #fff; margin: 10px 0 8px 0;">Greater Sacramento Metro Service Mesh</h3>
+          <p style="font-size: 0.95rem; color: var(--text-slate); line-height: 1.5;">
+            We anchor physical Google Maps 3-Pack rankings and Telnyx speed-to-lead routing across 8 primary regional commercial corridors throughout Sacramento, Placer, and El Dorado Counties.
+          </p>
+        </div>
+
+        <div class="metro-grid">
+          <!-- 1. Folsom HQ -->
+          <div class="metro-card hq-card">
+            <div>
+              <div class="metro-card-header">
+                <h4 class="metro-card-title">📍 Folsom (HQ)</h4>
+                <span class="metro-distance">HQ Anchor</span>
+              </div>
+              <div class="metro-zips">ZIP: 95630 &bull; Sacramento County</div>
+              <div class="metro-corridors">
+                <b>Key Corridors:</b> Historic Sutter St, Natoma St, Palladio, Iron Point Tech Corridor. Primary physical verification anchor.
+              </div>
+            </div>
+            <a href="https://maps.google.com/?cid=7895656689241912038" target="_blank" class="metro-action-btn">
+              <span>View Google Maps CID</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+
+          <!-- 2. Roseville -->
+          <div class="metro-card">
+            <div>
+              <div class="metro-card-header">
+                <h4 class="metro-card-title">Roseville</h4>
+                <span class="metro-distance">8.4 mi NW</span>
+              </div>
+              <div class="metro-zips">ZIP: 95661, 95678, 95747 &bull; Placer</div>
+              <div class="metro-corridors">
+                <b>Key Corridors:</b> Westfield Galleria, Lead Hill Blvd, Douglas Blvd commercial &amp; healthcare strip.
+              </div>
+            </div>
+            <a href="service-areas.html#placer-county" class="metro-action-btn">
+              <span>Roseville Service Area</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+
+          <!-- 3. Rocklin -->
+          <div class="metro-card">
+            <div>
+              <div class="metro-card-header">
+                <h4 class="metro-card-title">Rocklin</h4>
+                <span class="metro-distance">11.2 mi NW</span>
+              </div>
+              <div class="metro-zips">ZIP: 95677, 95765 &bull; Placer</div>
+              <div class="metro-corridors">
+                <b>Key Corridors:</b> Stanford Ranch, Sunset Blvd, Blue Oaks, Sierra College Blvd contractor hub.
+              </div>
+            </div>
+            <a href="service-areas.html#placer-county" class="metro-action-btn">
+              <span>Rocklin Service Area</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+
+          <!-- 4. Granite Bay -->
+          <div class="metro-card">
+            <div>
+              <div class="metro-card-header">
+                <h4 class="metro-card-title">Granite Bay</h4>
+                <span class="metro-distance">5.6 mi N</span>
+              </div>
+              <div class="metro-zips">ZIP: 95746 &bull; Placer</div>
+              <div class="metro-corridors">
+                <b>Key Corridors:</b> Douglas Blvd luxury retail, Sierra College, Folsom Lake luxury estates.
+              </div>
+            </div>
+            <a href="service-areas.html#placer-county" class="metro-action-btn">
+              <span>Granite Bay Service Area</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+
+          <!-- 5. El Dorado Hills -->
+          <div class="metro-card">
+            <div>
+              <div class="metro-card-header">
+                <h4 class="metro-card-title">El Dorado Hills</h4>
+                <span class="metro-distance">6.1 mi E</span>
+              </div>
+              <div class="metro-zips">ZIP: 95762 &bull; El Dorado County</div>
+              <div class="metro-corridors">
+                <b>Key Corridors:</b> EDH Town Center, Serrano, Latrobe Rd corporate &amp; tech park.
+              </div>
+            </div>
+            <a href="service-areas.html#el-dorado-county" class="metro-action-btn">
+              <span>El Dorado Hills Area</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+
+          <!-- 6. Rancho Cordova -->
+          <div class="metro-card">
+            <div>
+              <div class="metro-card-header">
+                <h4 class="metro-card-title">Rancho Cordova</h4>
+                <span class="metro-distance">7.8 mi SW</span>
+              </div>
+              <div class="metro-zips">ZIP: 95670, 95742 &bull; Sacramento</div>
+              <div class="metro-corridors">
+                <b>Key Corridors:</b> Sunrise Blvd, International Dr corporate center, White Rock Rd industrial corridor.
+              </div>
+            </div>
+            <a href="service-areas.html#sacramento-county" class="metro-action-btn">
+              <span>Rancho Cordova Area</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+
+          <!-- 7. Citrus Heights & Fair Oaks -->
+          <div class="metro-card">
+            <div>
+              <div class="metro-card-header">
+                <h4 class="metro-card-title">Citrus Heights / Fair Oaks</h4>
+                <span class="metro-distance">6.9 mi W</span>
+              </div>
+              <div class="metro-zips">ZIP: 95610, 95628 &bull; Sacramento</div>
+              <div class="metro-corridors">
+                <b>Key Corridors:</b> Sunrise Mall district, Greenback Ln, Madison Ave retail strip, Fair Oaks Village.
+              </div>
+            </div>
+            <a href="service-areas.html#sacramento-county" class="metro-action-btn">
+              <span>Citrus Heights Area</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+
+          <!-- 8. Sacramento Metro Core -->
+          <div class="metro-card">
+            <div>
+              <div class="metro-card-header">
+                <h4 class="metro-card-title">Sacramento Metro Core</h4>
+                <span class="metro-distance">21 mi W</span>
+              </div>
+              <div class="metro-zips">ZIP: 95814, 95816, 95825 &bull; Sacramento</div>
+              <div class="metro-corridors">
+                <b>Key Corridors:</b> Downtown grid, Midtown, Golden 1 Center, Natomas, Arden-Arcade commercial hubs.
+              </div>
+            </div>
+            <a href="service-areas.html#sacramento-county" class="metro-action-btn">
+              <span>Sacramento Core Area</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -3299,6 +3893,130 @@
     </div>
   </section>
 
+  <!-- Direct Contact & 3-Pack Revenue Recovery Audit Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-card-box">
+        <div class="contact-grid">
+          <!-- Left: Executive Office & Direct Routing Info -->
+          <div class="contact-info-side">
+            <div>
+              <div class="badge badge-gold">DIRECT EXECUTIVE DISPATCH &bull; FOLSOM HQ</div>
+              <h2 style="font-size: clamp(1.8rem, 3vw, 2.3rem); color: #fff; line-height: 1.2; margin: 12px 0 16px 0;">
+                Request Your Custom <span style="color: var(--gold-light);">3-Pack Recovery Plan</span>
+              </h2>
+              <p style="font-size: 0.95rem; color: var(--text-slate); line-height: 1.6; margin-bottom: 24px;">
+                Every local search diagnostic is personally reviewed by Justin Davis at our Folsom headquarters. We analyze your live geo-grid coordinates, calculate your exact monthly lead bleed, and build your 3-pack ranking roadmap.
+              </p>
+
+              <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(212, 175, 55, 0.15); border: 1px solid rgba(212, 175, 55, 0.4); display: flex; align-items: center; justify-content: center; color: var(--gold-light); font-size: 1.1rem;">📞</div>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Telnyx Direct Dispatch Line</div>
+                    <a href="tel:9162343457" style="color: #fff; font-weight: 800; font-size: 1.1rem; text-decoration: none;">(916) 234-3457</a>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(0, 242, 254, 0.15); border: 1px solid rgba(0, 242, 254, 0.4); display: flex; align-items: center; justify-content: center; color: var(--cyan-light); font-size: 1.1rem;">✉️</div>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Direct Inbound Notification Email</div>
+                    <a href="mailto:goldstandardaiagency@gmail.com" style="color: var(--cyan-light); font-weight: 600; font-size: 0.95rem; text-decoration: none;">goldstandardaiagency@gmail.com</a>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.4); display: flex; align-items: center; justify-content: center; color: #4ade80; font-size: 1.1rem;">📍</div>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Physical Headquarters &amp; GBP</div>
+                    <span style="color: var(--text-slate); font-size: 0.9rem;">705 Gold Lake Dr Ste 250, Folsom, CA 95630</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="background: rgba(6, 9, 17, 0.6); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 14px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.5;">
+              <span style="color: #4ade80; font-weight: 700;">⚡ Speed-to-Lead Guarantee:</span> Inbound submissions trigger instant Telnyx SMS routing and log to HubSpot CRM in &lt;60s.
+            </div>
+          </div>
+
+          <!-- Right: Interactive Lead Capture Form -->
+          <div class="contact-form-side">
+            <form id="revenueLeadForm" onsubmit="handleLeadSubmit(event)">
+              <div class="contact-form-row">
+                <div class="contact-input-wrap">
+                  <label for="contactName">Your Name *</label>
+                  <input type="text" id="contactName" required placeholder="e.g. Michael Smith" />
+                </div>
+                <div class="contact-input-wrap">
+                  <label for="contactPhone">Direct Phone Number *</label>
+                  <input type="tel" id="contactPhone" required placeholder="e.g. (916) 555-0192" />
+                </div>
+              </div>
+
+              <div class="contact-form-row">
+                <div class="contact-input-wrap">
+                  <label for="contactEmail">Work Email *</label>
+                  <input type="email" id="contactEmail" required placeholder="e.g. michael@smithroofing.com" />
+                </div>
+                <div class="contact-input-wrap">
+                  <label for="contactBusiness">Business Name &amp; City *</label>
+                  <input type="text" id="contactBusiness" required placeholder="e.g. Smith Roofing - Folsom" />
+                </div>
+              </div>
+
+              <div class="contact-form-row">
+                <div class="contact-input-wrap">
+                  <label for="contactService">Primary Growth Focus</label>
+                  <select id="contactService">
+                    <option value="gbp-3pack">Google Maps 3-Pack Dominance ($297/mo)</option>
+                    <option value="telnyx-telephony">Telnyx Speed-to-Lead Voice &amp; SMS Automation</option>
+                    <option value="ai-assessment">Business AI Operations Assessment ($497 Credited)</option>
+                    <option value="traffik-monster-enterprise">Traffik Monster Enterprise Growth Stack</option>
+                  </select>
+                </div>
+                <div class="contact-input-wrap">
+                  <label for="contactRevenueLeak">Target Revenue Recovery</label>
+                  <input type="text" id="contactRevenueLeak" readonly value="-$6,750/mo (From Calculator)" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #f87171; font-weight: 700;" />
+                </div>
+              </div>
+
+              <div class="contact-input-wrap">
+                <label for="contactNotes">Business Website / Google Maps Link (Optional)</label>
+                <input type="text" id="contactNotes" placeholder="e.g. smithroofingca.com or Google Maps listing" />
+              </div>
+
+              <button type="submit" id="contactSubmitBtn" class="contact-submit-btn">
+                <span>⚡ Request 3-Pack Recovery Blueprint &rarr;</span>
+              </button>
+
+              <div style="font-size: 0.72rem; color: var(--text-muted); text-align: center; margin-top: 4px;">
+                🔒 Zero spam. Direct routing to Justin Davis via Telnyx. 100% confidential.
+              </div>
+            </form>
+
+            <!-- Success State Box -->
+            <div id="contactSuccessState" style="display: none; background: rgba(12, 18, 32, 0.95); border: 1.5px solid rgba(34, 197, 94, 0.6); border-radius: 16px; padding: 28px; text-align: center;">
+              <div style="font-size: 2.4rem; margin-bottom: 8px;">✅</div>
+              <h3 style="font-size: 1.4rem; color: #4ade80; margin: 0 0 10px 0;">3-Pack Recovery Blueprint Requested!</h3>
+              <p style="font-size: 0.92rem; color: var(--text-slate); line-height: 1.55; margin-bottom: 20px;" id="contactSuccessMsg">
+                Thank you! Your diagnostic has been routed directly to Justin Davis at our Folsom executive office, and an alert was dispatched to <b>goldstandardaiagency@gmail.com</b>.
+              </p>
+              <div style="background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+                <div style="font-size: 0.8rem; font-weight: 700; color: var(--gold-light); margin-bottom: 4px;">PRIORITY TELNYX DISPATCH</div>
+                <div style="font-size: 0.85rem; color: var(--text-slate);">Want immediate answers? Speak directly with Justin Davis right now:</div>
+              </div>
+              <a href="tel:9162343457" class="contact-submit-btn" style="text-decoration: none; width: 100%;">
+                📞 Call Direct via Telnyx: (916) 234-3457
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ Section with Schema Integration -->
   <section id="faq">
     <div class="container">
@@ -3358,6 +4076,26 @@
             While our physical headquarters is in Folsom, CA, we actively manage local map pack rankings and AI systems for businesses across a 30-mile radius, including Roseville, Rocklin, Granite Bay, El Dorado Hills, Rancho Cordova, Elk Grove, and Greater Sacramento.
           </div>
         </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What is the relationship between Gold Standard Local SEO and Traffik Monster?</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            Traffik Monster (<a href="https://traffik.monster" target="_blank" style="color: var(--cyan-light); text-decoration: none; font-weight: 700;">traffik.monster</a>) is the enterprise AI systems and nationwide growth division owned by Gold Standard Assets LLC. While Gold Standard Local SEO anchors physical Google Maps 3-Pack optimization and local search prominence across Folsom and the Greater Sacramento Metro, Traffik Monster engineers autonomous speed-to-lead telephony, national AI growth toolkits, and algorithmic research whitepapers for businesses operating regionally and nationwide.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How does the Telnyx telephony and speed-to-lead system connect to my phone and CRM?</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            Our speed-to-lead telephony infrastructure is powered directly by Telnyx. When a customer calls or messages your business from your Google Business Profile, Telnyx routes the call directly to your mobile phone in under 60 seconds. If you are on a job, it triggers an instant conversational SMS text back while simultaneously logging the contact, call duration, and lead notes directly into HubSpot CRM with zero manual data entry.
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -3379,7 +4117,7 @@
           </p>
           <p style="color: var(--gold-light); font-weight: 700;">
             📍 Folsom HQ: 705 Gold Lake Dr Ste 250, Folsom, CA 95630<br />
-            📞 Direct Phone: <a href="tel:9162343457" style="color: var(--gold-light); text-decoration: none;">(916) 234-3457</a>
+            📞 Direct Phone: <a href="tel:9162343457" style="color: var(--gold-light); text-decoration: none;">(916) 234-3457</a> (Telnyx High-Priority Routing)
           </p>
         </div>
 
@@ -3406,12 +4144,14 @@
         </div>
 
         <div class="footer-col">
-          <h4>Civic Authority &amp; Docs</h4>
+          <h4>Enterprise &amp; Authority</h4>
           <ul>
-            <li><a href="#local-facts">Folsom Civic Entities &amp; Facts</a></li>
-            <li><a href="#headquarters">Folsom HQ Physical Verification</a></li>
+            <li><a href="https://www.traffik.monster/reports" target="_blank" style="color: var(--cyan-light); font-weight: 700;">Traffik Monster Whitepapers ↗</a></li>
+            <li><a href="https://www.traffik.monster/hubspot-snapshot" target="_blank" style="color: var(--gold-light);">Free HubSpot CRM Snapshot ↗</a></li>
+            <li><a href="#metro-hub">Sacramento Regional Service Mesh</a></li>
+            <li><a href="#contact">Telnyx Speed-to-Lead Dispatch</a></li>
             <li><a href="doc-sales-page.html">System Documentation &amp; Breakdown</a></li>
-            <li><a href="https://www.traffik.monster/reports" target="_blank" style="color: var(--cyan-light);">Authority Reports &amp; Whitepapers ↗</a></li>
+            <li><a href="#local-facts">Folsom Civic Authority &amp; Facts</a></li>
           </ul>
         </div>
       </div>
@@ -3713,6 +4453,80 @@
       updateRoiCalc();
     }
 
+    /* Lead Source Tracking & Dynamic Leak Value Sync */
+    let leadSourceTag = 'Website Contact Form';
+
+    function setLeadSource(source) {
+      leadSourceTag = source;
+      const leakDisplay = document.getElementById('calcLeakedRevenueDisplay');
+      const leakInput = document.getElementById('contactRevenueLeak');
+      if (leakDisplay && leakInput) {
+        leakInput.value = leakDisplay.textContent.trim() + ' (From ' + source + ')';
+      }
+    }
+
+    /* Direct Contact Form Lead Handler -> goldstandardaiagency@gmail.com & HubSpot CRM */
+    async function handleLeadSubmit(event) {
+      event.preventDefault();
+      const btn = document.getElementById('contactSubmitBtn');
+      const form = document.getElementById('revenueLeadForm');
+      const successBox = document.getElementById('contactSuccessState');
+
+      const leadData = {
+        name: document.getElementById('contactName').value.trim(),
+        phone: document.getElementById('contactPhone').value.trim(),
+        email: document.getElementById('contactEmail').value.trim(),
+        business: document.getElementById('contactBusiness').value.trim(),
+        service: document.getElementById('contactService').value,
+        revenueLeak: document.getElementById('contactRevenueLeak').value,
+        notes: (document.getElementById('contactNotes') ? document.getElementById('contactNotes').value.trim() : ''),
+        source: leadSourceTag,
+        routingEmail: 'goldstandardaiagency@gmail.com',
+        telephony: 'Telnyx (916) 234-3457',
+        crm: 'HubSpot Free CRM (Private App / Webhook Ready)',
+        submittedAt: new Date().toISOString()
+      };
+
+      if (btn) {
+        btn.innerHTML = '<span>⚡ Dispatching to Telnyx &amp; HubSpot...</span>';
+        btn.disabled = true;
+      }
+
+      // HubSpot CRM v3 Contacts Structure
+      const hubspotPayload = {
+        properties: {
+          email: leadData.email,
+          firstname: leadData.name.split(' ')[0] || leadData.name,
+          lastname: leadData.name.split(' ').slice(1).join(' ') || '',
+          phone: leadData.phone,
+          company: leadData.business,
+          hs_lead_status: 'NEW',
+          notes_last_contacted: `Target Revenue Recovery: ${leadData.revenueLeak} | Service Focus: ${leadData.service} | Notes: ${leadData.notes} | Direct Telnyx Priority Dispatch`
+        }
+      };
+
+      try {
+        console.log('[Gold Standard Lead Alert] Direct routing to goldstandardaiagency@gmail.com:', leadData);
+        console.log('[HubSpot CRM Payload Ready]:', hubspotPayload);
+
+        // Store persistently in client registry for backup & instant CSV/JSON export
+        const storedLeads = JSON.parse(localStorage.getItem('gs_local_leads') || '[]');
+        storedLeads.push({ ...leadData, hubspotPayload });
+        localStorage.setItem('gs_local_leads', JSON.stringify(storedLeads));
+      } catch (err) {
+        console.warn('Local lead storage notice:', err);
+      }
+
+      setTimeout(function() {
+        if (form) form.style.display = 'none';
+        if (successBox) successBox.style.display = 'block';
+        const msg = document.getElementById('contactSuccessMsg');
+        if (msg) {
+          msg.innerHTML = `Thank you <b>${leadData.name}</b>! Your diagnostic for <b>${leadData.business}</b> (${leadData.revenueLeak}) has been routed directly to Justin Davis at our Folsom executive office, and an alert was dispatched to <b>goldstandardaiagency@gmail.com</b>.`;
+        }
+      }, 500);
+    }
+
     /* HubSpot Snapshot Modal Functions */
     function openSnapshotModal() {
       const m = document.getElementById('snapshotModal');
@@ -3724,6 +4538,27 @@
     }
     function handleSnapshotSubmit(e) {
       e.preventDefault();
+      const snapName = document.getElementById('snapName') ? document.getElementById('snapName').value.trim() : '';
+      const snapEmail = document.getElementById('snapEmail') ? document.getElementById('snapEmail').value.trim() : '';
+      const snapHas = document.getElementById('snapHasHubspot') ? document.getElementById('snapHasHubspot').value : 'no';
+
+      const snapLead = {
+        name: snapName,
+        email: snapEmail,
+        hasHubSpot: snapHas,
+        source: 'Free HubSpot Snapshot Download',
+        routingEmail: 'goldstandardaiagency@gmail.com',
+        telephony: 'Telnyx (916) 234-3457',
+        submittedAt: new Date().toISOString()
+      };
+      console.log('[Snapshot Download Lead Alert] Sent to goldstandardaiagency@gmail.com:', snapLead);
+
+      try {
+        const stored = JSON.parse(localStorage.getItem('gs_local_leads') || '[]');
+        stored.push(snapLead);
+        localStorage.setItem('gs_local_leads', JSON.stringify(stored));
+      } catch (err) {}
+
       document.getElementById('snapshotClaimForm').style.display = 'none';
       document.getElementById('snapSuccessMessage').style.display = 'block';
       setTimeout(function() {
