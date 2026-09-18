@@ -4,3 +4,4 @@ __pycache__/
 vendor_py/
 .DS_Store
 geo_dist/
+vendor_py
