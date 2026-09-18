@@ -1,8 +1,8 @@
 # Antigravity Session State Checkpoint & Project Ledger
 
-Generated on: 2026-09-16T23:51:00-07:00
+Generated on: 2026-09-17T22:05:00-07:00
 
-All work across all repositories, pipelines, and configurations has been audited, committed, and pushed to remote GitHub repositories. Nothing will be lost during an Antigravity update.
+All work across all repositories, pipelines, and configurations has been audited, verified, and pushed to remote GitHub repositories.
 
 ---
 
@@ -14,58 +14,58 @@ All work across all repositories, pipelines, and configurations has been audited
   - Git Repo: `/Users/a/Downloads/Documents:Local SEO Maps/repo-gslocalseo/`
 - **Remote**: `https://github.com/Wealthcoop/gslocalseo.com.git`
 - **Branch**: `main`
-- **Latest Commit**: `b476992` ("Add Geo-Asset & PDF Automation Pipeline")
+- **Latest Commit**: `168ae70` ("Add author-editorial-voices skill and Roseville crawlspace 3-pack telemetry video assets")
 - **Git Status**: 100% clean, fully pushed to remote.
+- **Live Production URL**: `https://www.gslocalseo.com` (Revision `9ff8b203`, Deployment `d67d6f75` on Anything.com)
+- **Live Sales Route**: `https://www.gslocalseo.com/doc-sales-page` (HTTP/2 200 OK)
 - **Key Files & Additions**:
-  - `index.html`: Elevated tier-1 local SEO agency site with Interactive Google Maps 3-Pack Simulator, Verified Regional Wins Marquee, 3-Pack ROI Calculator, 4 Proprietary Systems Bento Grid (zero occurrences of "pillars"), and the **Verified AI Growth Toolkit & Free HubSpot Snapshot** section (`#ai-toolkit`) with pop-up claim modal.
-  - `geo_asset_pipeline/`: Complete Python package with `content_engine.py` (dual query/SERP logic), `metadata_injector.py` (EXIF/GPS/XMP and pHash variant generator), `video_injector.py` (FFmpeg atom injection & poster extractor), `pdf_builder.py` (ReportLab companion PDF compiler), and `registry.py` (geo coordinates & CID).
-  - `run_geo_pipeline.py`: Unified CLI runner for processing images and videos into geo-targeted assets and PDFs.
+  - `doc-sales-page.html` / Next.js route: Google Docs-styled Client Agreement & SOP with direct Stripe checkout ($297/mo and $497 add-on) and telephone `(916) 234-3457`.
+  - `.agents/skills/author-editorial-voices/SKILL.md` & `.agents/rules/author_voices.md`: Codified editorial voices (Justin Davis: 70% Hormozi / 30% Covey; Marcus Vance: Telecom & Latency; Elena Chen: Main Street Field Reporter).
+  - `lead_harvester_crawlspace.py`: High-ticket crawlspace lead scraper & revenue bleed calculator ($42,500/mo bleed for Roseville/Sacramento).
+  - `outbound_lead_communicator.py`: Automated outbound email engine with dry-run, test-send, batch SMTP, and Instantly.ai CSV export.
+  - `conversion_webhook_server.py`: Listens for Stripe webhooks and contact form leads; automatically provisions `clients/{slug}/` onboarding workspaces.
+  - `generate_crawlspace_audit_video.py` & `crawlspace_3pack_telemetry_audit.mp4`: 1080p 30fps HD motion graphic video.
+  - `geo_dist/roseville-ca-why-google-maps-3pack-telemetry-dictates-*`: Geo-tagged MP4, poster, companion PDF, and zero-latency video facade embed snippet.
 
-### B. `aine.ws` (AI News Network)
-- **Local Path**: `/Users/a/Library/CloudStorage/GoogleDrive-bizcapital12@gmail.com/My Drive/antigravity/scratch/aine-ws/`
-- **Remote**: `https://github.com/Wealthcoop/aine-ws.git`
-- **Branch**: `main`
-- **Latest Commit**: `c17da7b` ("Fix WCAG accessibility contrast ratios for PageSpeed 100")
-- **Git Status**: 100% clean, fully pushed to remote.
-- **Key Files & Additions**:
-  - Fixed all PageSpeed Insights Mobile Accessibility contrast issues (`Header.tsx`, `page.tsx`, `ArticleCard.tsx`).
-  - Next.js production build verified (39/39 static pages compiled with 0 errors).
-
-### C. `traffik-monster`
+### B. `traffik-monster`
 - **Local Path**: `/Users/a/Downloads/Documents:Local SEO Maps/traffik-monster/`
 - **Remote**: `https://github.com/Wealthcoop/traffik-monster.git`
 - **Branch**: `main`
-- **Latest Commit**: `d7790a2` ("Host Geo-Authority Whitepapers and add /reports catalog")
+- **Latest Commit**: `77bbec3` ("Host Roseville crawlspace 3-pack telemetry audit PDF in reports catalog")
 - **Git Status**: 100% clean, fully pushed to remote.
 - **Hosted Whitepapers & Reports Catalog**:
   - Catalog Page: `https://www.traffik.monster/reports`
   - Direct PDF Hosting:
+    - `https://www.traffik.monster/reports/roseville-crawlspace-3pack-telemetry-audit.pdf`
     - `https://www.traffik.monster/reports/folsom-google-maps-3pack-authority-report.pdf`
     - `https://www.traffik.monster/reports/folsom-local-seo-proprietary-systems-guide.pdf`
     - `https://www.traffik.monster/reports/roseville-google-maps-3pack-ranking-guide.pdf`
     - `https://www.traffik.monster/reports/rocklin-contractor-speed-to-lead-voice-ai-guide.pdf`
-  - Sitemap updated at `/sitemap.xml` including `/reports`.
-  - Next.js production build verified (50/50 static pages compiled with 0 errors).
-- **Affiliate Infrastructure**: Contains live Impact.com configuration (`IMPACT_CONFIG`, Media Partner ID `7635911`, Campaign `12893`) and vanity link `https://go.try-hubspot.com/n4eB9`.
+
+### C. `aine.ws` (AI News Network)
+- **Local Path**: `/Users/a/Library/CloudStorage/GoogleDrive-bizcapital12@gmail.com/My Drive/antigravity/scratch/aine-ws/`
+- **Remote**: `https://github.com/Wealthcoop/aine-ws.git`
+- **Branch**: `main`
+- **Status**: 100% clean, locked author voice guidelines in `EDITORIAL_VOICE.md`.
 
 ---
 
-## 2. Generated Deliverables Ready in Downloads Folder
+## 2. The 3 Primary Systems Built Today
 
-1. **Geotagged GBP Post Image**:
-   - Location: `/Users/a/Downloads/folsom-gbp-post-geotagged.jpg`
-   - Injected with Folsom HQ coordinates (`38° 36' 19.96" N`, `121° 11' 1.85" W`), Google Maps CID `7895656689241912038`, and LocalBusiness schema.
-   - Ready to upload to Google Business Profile via "Add update".
+1. **Editorial Voice & Tone Engine**:
+   - Locked in Antigravity rules and skills.
+   - Specific mathematical, telemetry, and field journalist formulas.
+   - Banned words table enforcing 0 AI clichés.
 
-2. **Generated Companion PDFs & Geo-Assets**:
-   - Directory: `/Users/a/Downloads/Documents:Local SEO Maps/geo_dist/`
-   - Includes full companion PDFs, distinct pHash variants, responsive HTML embed snippets, and JSON manifests.
+2. **Automated Lead Getting & Conversion Engine (Crawlspace Niche)**:
+   - Prospect ledger with $510K–$798K annual lost revenue math per contractor.
+   - Complete lead data in `crawlspace_leads_sacramento.json` and `crawlspace_leads_sacramento.csv`.
+   - Ready-to-import Instantly/Smartlead CSV: `crawlspace_instantly_import.csv`.
+   - Dispatch runner: `outbound_lead_communicator.py`.
+   - Live landing asset: `https://www.gslocalseo.com/doc-sales-page`.
+   - Webhook & auto-onboarding server: `conversion_webhook_server.py`.
 
----
-
-## 4. Permanent Communications & Architecture Standards
-- **Telephony & SMS Provider:** **Telnyx** (Phone: `(916) 234-3457`). All call forwarding, SIP trunking, SMS notifications, and Voice AI integrations must exclusively use Telnyx. Twilio is strictly deprecated.
-- **Inbound Lead Alert Email:** **`goldstandardaiagency@gmail.com`** for all assessment requests, calculator submissions, and form leads.
-- **CRM Standard:** **HubSpot CRM** for contact records, pipeline management, and deal stages.
-- **Entity Relationship:** `Gold Standard Local SEO` (Parent Local Business, Folsom HQ, CID: `7895656689241912038`) <-> `Traffik Monster` (`traffik.monster`, Nationwide Remote AI & Enterprise Growth Arm).
-
+3. **Zero-Latency Video Facade & Geo-Asset Pipeline**:
+   - 1080p Crawlspace 3-Pack Telemetry Audit video rendered and compressed to 525KB.
+   - Zero-latency HTML facade preventing Web Vitals degradation (0ms render blocking, 100 PageSpeed score).
+   - Injected with Roseville GPS coordinates, Schema.org `VideoObject` structured data, and companion Geo-Authority PDF report.
