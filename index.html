@@ -2569,6 +2569,17 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     }
+    .metro-card.metro-card-active {
+      border-color: var(--gold-light) !important;
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.6) !important;
+      transform: translateY(-4px) scale(1.02);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .sim-radar-node.active-node {
+      border-color: var(--gold-main) !important;
+      background: rgba(212, 175, 55, 0.2) !important;
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.45) !important;
+    }
     .metro-card.hq-card {
       border: 1.5px solid rgba(212, 175, 55, 0.6);
       background: linear-gradient(135deg, rgba(18, 26, 45, 0.9), rgba(12, 18, 32, 0.9));
@@ -2904,43 +2915,43 @@
               <!-- 3x3 Geo-Grid Radar Simulation -->
               <div class="sim-radar-section">
                 <div class="sim-radar-title">
-                  <span>30-Mile Regional Geo-Grid Coverage (Local Falcon)</span>
+                  <span>30-Mile Regional Geo-Grid Coverage (Local Falcon) <small style="font-size:0.75rem; color:var(--gold-light); font-weight:normal; margin-left:4px; text-transform:none;">(Click node to inspect)</small></span>
                   <span style="color: var(--gold-light);">9 / 9 NODES #1</span>
                 </div>
                 <div class="sim-radar-grid" id="simRadarGrid">
-                  <div class="sim-radar-node" title="Folsom Headquarters">
+                  <div class="sim-radar-node" id="radar-node-folsom" onclick="selectMetroCity('folsom')" title="Click to view Folsom HQ coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">Folsom (HQ)</div>
                   </div>
-                  <div class="sim-radar-node" title="Roseville Hub">
+                  <div class="sim-radar-node" id="radar-node-roseville" onclick="selectMetroCity('roseville')" title="Click to view Roseville coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">Roseville</div>
                   </div>
-                  <div class="sim-radar-node" title="Rocklin Hub">
+                  <div class="sim-radar-node" id="radar-node-rocklin" onclick="selectMetroCity('rocklin')" title="Click to view Rocklin coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">Rocklin</div>
                   </div>
-                  <div class="sim-radar-node" title="Granite Bay Hub">
+                  <div class="sim-radar-node" id="radar-node-granite-bay" onclick="selectMetroCity('granite-bay')" title="Click to view Granite Bay coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">Granite Bay</div>
                   </div>
-                  <div class="sim-radar-node" title="El Dorado Hills Hub">
+                  <div class="sim-radar-node" id="radar-node-el-dorado-hills" onclick="selectMetroCity('el-dorado-hills')" title="Click to view El Dorado Hills coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">El Dorado Hills</div>
                   </div>
-                  <div class="sim-radar-node" title="Citrus Heights Hub">
+                  <div class="sim-radar-node" id="radar-node-citrus-heights" onclick="selectMetroCity('citrus-heights')" title="Click to view Citrus Heights coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">Citrus Heights</div>
                   </div>
-                  <div class="sim-radar-node" title="Fair Oaks Hub">
+                  <div class="sim-radar-node" id="radar-node-fair-oaks" onclick="selectMetroCity('fair-oaks')" title="Click to view Fair Oaks coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">Fair Oaks</div>
                   </div>
-                  <div class="sim-radar-node" title="Rancho Cordova Hub">
+                  <div class="sim-radar-node" id="radar-node-rancho-cordova" onclick="selectMetroCity('rancho-cordova')" title="Click to view Rancho Cordova coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">Rancho Cordova</div>
                   </div>
-                  <div class="sim-radar-node" title="Sacramento Metro Hub">
+                  <div class="sim-radar-node" id="radar-node-sacramento" onclick="selectMetroCity('sacramento')" title="Click to view Sacramento coverage" role="button" tabindex="0">
                     <div class="sim-node-rank">#1 🟢</div>
                     <div class="sim-node-city">Sacramento</div>
                   </div>
@@ -3614,17 +3625,17 @@
             <div class="hq-cities-wrap">
               <div class="hq-cities-title">Primary Service Communities &amp; Municipalities</div>
               <div class="hq-cities-tags">
-                <a href="#headquarters" class="hq-city-tag hq-tag-primary">📍 Folsom HQ</a>
-                <a href="service-areas.html#placer-county" class="hq-city-tag">Roseville &rarr;</a>
-                <a href="service-areas.html#placer-county" class="hq-city-tag">Rocklin &rarr;</a>
-                <a href="service-areas.html#placer-county" class="hq-city-tag">Granite Bay &rarr;</a>
-                <a href="service-areas.html#el-dorado-county" class="hq-city-tag">El Dorado Hills &rarr;</a>
-                <a href="service-areas.html#sacramento-county" class="hq-city-tag">Citrus Heights &rarr;</a>
-                <a href="service-areas.html#sacramento-county" class="hq-city-tag">Fair Oaks &rarr;</a>
-                <a href="service-areas.html#sacramento-county" class="hq-city-tag">Orangevale &rarr;</a>
-                <a href="service-areas.html#sacramento-county" class="hq-city-tag">Carmichael &rarr;</a>
-                <a href="service-areas.html#sacramento-county" class="hq-city-tag">Rancho Cordova &rarr;</a>
-                <a href="service-areas.html#sacramento-county" class="hq-city-tag">Sacramento &rarr;</a>
+                <a href="#metro-folsom" onclick="selectMetroCity('folsom'); return false;" class="hq-city-tag hq-tag-primary">📍 Folsom HQ</a>
+                <a href="#metro-roseville" onclick="selectMetroCity('roseville'); return false;" class="hq-city-tag">Roseville &rarr;</a>
+                <a href="#metro-rocklin" onclick="selectMetroCity('rocklin'); return false;" class="hq-city-tag">Rocklin &rarr;</a>
+                <a href="#metro-granite-bay" onclick="selectMetroCity('granite-bay'); return false;" class="hq-city-tag">Granite Bay &rarr;</a>
+                <a href="#metro-el-dorado-hills" onclick="selectMetroCity('el-dorado-hills'); return false;" class="hq-city-tag">El Dorado Hills &rarr;</a>
+                <a href="#metro-citrus-heights" onclick="selectMetroCity('citrus-heights'); return false;" class="hq-city-tag">Citrus Heights &rarr;</a>
+                <a href="#metro-fair-oaks" onclick="selectMetroCity('fair-oaks'); return false;" class="hq-city-tag">Fair Oaks &rarr;</a>
+                <a href="#metro-orangevale" onclick="selectMetroCity('orangevale'); return false;" class="hq-city-tag">Orangevale &rarr;</a>
+                <a href="#metro-carmichael" onclick="selectMetroCity('carmichael'); return false;" class="hq-city-tag">Carmichael &rarr;</a>
+                <a href="#metro-rancho-cordova" onclick="selectMetroCity('rancho-cordova'); return false;" class="hq-city-tag">Rancho Cordova &rarr;</a>
+                <a href="#metro-sacramento" onclick="selectMetroCity('sacramento'); return false;" class="hq-city-tag">Sacramento &rarr;</a>
               </div>
             </div>
           </div>
@@ -3661,7 +3672,7 @@
 
         <div class="metro-grid">
           <!-- 1. Folsom HQ -->
-          <div class="metro-card hq-card">
+          <div class="metro-card hq-card" id="metro-folsom">
             <div>
               <div class="metro-card-header">
                 <h4 class="metro-card-title">📍 Folsom (HQ)</h4>
@@ -3672,14 +3683,19 @@
                 <b>Key Corridors:</b> Historic Sutter St, Natoma St, Palladio, Iron Point Tech Corridor. Primary physical verification anchor.
               </div>
             </div>
-            <a href="https://maps.google.com/?cid=7895656689241912038" target="_blank" class="metro-action-btn">
-              <span>View Google Maps CID</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            </a>
+            <div>
+              <a href="#contact" onclick="selectMetroCity('folsom', true); return false;" class="metro-action-btn" style="background: var(--gold-main); color: #000; font-weight: 800; margin-bottom: 8px; text-decoration: none;">
+                <span>⚡ Request Folsom 3-Pack Blueprint &rarr;</span>
+              </a>
+              <a href="https://maps.google.com/?cid=7895656689241912038" target="_blank" class="metro-action-btn" style="opacity: 0.85; font-size: 0.82rem; text-decoration: none;">
+                <span>View Google Maps CID</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
           </div>
 
           <!-- 2. Roseville -->
-          <div class="metro-card">
+          <div class="metro-card" id="metro-roseville">
             <div>
               <div class="metro-card-header">
                 <h4 class="metro-card-title">Roseville</h4>
@@ -3690,14 +3706,19 @@
                 <b>Key Corridors:</b> Westfield Galleria, Lead Hill Blvd, Douglas Blvd commercial &amp; healthcare strip.
               </div>
             </div>
-            <a href="service-areas.html#placer-county" class="metro-action-btn">
-              <span>Roseville Service Area</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            </a>
+            <div>
+              <a href="#contact" onclick="selectMetroCity('roseville', true); return false;" class="metro-action-btn" style="background: var(--gold-main); color: #000; font-weight: 800; margin-bottom: 8px; text-decoration: none;">
+                <span>⚡ Request Roseville 3-Pack Blueprint &rarr;</span>
+              </a>
+              <a href="service-areas.html#placer-county" class="metro-action-btn" style="opacity: 0.85; font-size: 0.82rem; text-decoration: none;">
+                <span>Roseville Service Area Specs ↗</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
           </div>
 
           <!-- 3. Rocklin -->
-          <div class="metro-card">
+          <div class="metro-card" id="metro-rocklin">
             <div>
               <div class="metro-card-header">
                 <h4 class="metro-card-title">Rocklin</h4>
@@ -3708,14 +3729,19 @@
                 <b>Key Corridors:</b> Stanford Ranch, Sunset Blvd, Blue Oaks, Sierra College Blvd contractor hub.
               </div>
             </div>
-            <a href="service-areas.html#placer-county" class="metro-action-btn">
-              <span>Rocklin Service Area</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            </a>
+            <div>
+              <a href="#contact" onclick="selectMetroCity('rocklin', true); return false;" class="metro-action-btn" style="background: var(--gold-main); color: #000; font-weight: 800; margin-bottom: 8px; text-decoration: none;">
+                <span>⚡ Request Rocklin 3-Pack Blueprint &rarr;</span>
+              </a>
+              <a href="service-areas.html#placer-county" class="metro-action-btn" style="opacity: 0.85; font-size: 0.82rem; text-decoration: none;">
+                <span>Rocklin Service Area Specs ↗</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
           </div>
 
           <!-- 4. Granite Bay -->
-          <div class="metro-card">
+          <div class="metro-card" id="metro-granite-bay">
             <div>
               <div class="metro-card-header">
                 <h4 class="metro-card-title">Granite Bay</h4>
@@ -3726,14 +3752,19 @@
                 <b>Key Corridors:</b> Douglas Blvd luxury retail, Sierra College, Folsom Lake luxury estates.
               </div>
             </div>
-            <a href="service-areas.html#placer-county" class="metro-action-btn">
-              <span>Granite Bay Service Area</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            </a>
+            <div>
+              <a href="#contact" onclick="selectMetroCity('granite-bay', true); return false;" class="metro-action-btn" style="background: var(--gold-main); color: #000; font-weight: 800; margin-bottom: 8px; text-decoration: none;">
+                <span>⚡ Request Granite Bay Blueprint &rarr;</span>
+              </a>
+              <a href="service-areas.html#placer-county" class="metro-action-btn" style="opacity: 0.85; font-size: 0.82rem; text-decoration: none;">
+                <span>Granite Bay Service Area Specs ↗</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
           </div>
 
           <!-- 5. El Dorado Hills -->
-          <div class="metro-card">
+          <div class="metro-card" id="metro-el-dorado-hills">
             <div>
               <div class="metro-card-header">
                 <h4 class="metro-card-title">El Dorado Hills</h4>
@@ -3744,14 +3775,19 @@
                 <b>Key Corridors:</b> EDH Town Center, Serrano, Latrobe Rd corporate &amp; tech park.
               </div>
             </div>
-            <a href="service-areas.html#el-dorado-county" class="metro-action-btn">
-              <span>El Dorado Hills Area</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            </a>
+            <div>
+              <a href="#contact" onclick="selectMetroCity('el-dorado-hills', true); return false;" class="metro-action-btn" style="background: var(--gold-main); color: #000; font-weight: 800; margin-bottom: 8px; text-decoration: none;">
+                <span>⚡ Request EDH 3-Pack Blueprint &rarr;</span>
+              </a>
+              <a href="service-areas.html#el-dorado-county" class="metro-action-btn" style="opacity: 0.85; font-size: 0.82rem; text-decoration: none;">
+                <span>El Dorado Hills Area Specs ↗</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
           </div>
 
           <!-- 6. Rancho Cordova -->
-          <div class="metro-card">
+          <div class="metro-card" id="metro-rancho-cordova">
             <div>
               <div class="metro-card-header">
                 <h4 class="metro-card-title">Rancho Cordova</h4>
@@ -3762,32 +3798,42 @@
                 <b>Key Corridors:</b> Sunrise Blvd, International Dr corporate center, White Rock Rd industrial corridor.
               </div>
             </div>
-            <a href="service-areas.html#sacramento-county" class="metro-action-btn">
-              <span>Rancho Cordova Area</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            </a>
+            <div>
+              <a href="#contact" onclick="selectMetroCity('rancho-cordova', true); return false;" class="metro-action-btn" style="background: var(--gold-main); color: #000; font-weight: 800; margin-bottom: 8px; text-decoration: none;">
+                <span>⚡ Request Rancho Cordova Blueprint &rarr;</span>
+              </a>
+              <a href="service-areas.html#sacramento-county" class="metro-action-btn" style="opacity: 0.85; font-size: 0.82rem; text-decoration: none;">
+                <span>Rancho Cordova Area Specs ↗</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
           </div>
 
-          <!-- 7. Citrus Heights & Fair Oaks -->
-          <div class="metro-card">
+          <!-- 7. Citrus Heights / Fair Oaks -->
+          <div class="metro-card" id="metro-citrus-heights">
             <div>
               <div class="metro-card-header">
                 <h4 class="metro-card-title">Citrus Heights / Fair Oaks</h4>
                 <span class="metro-distance">6.9 mi W</span>
               </div>
-              <div class="metro-zips">ZIP: 95610, 95628 &bull; Sacramento</div>
+              <div class="metro-zips">ZIP: 95610, 95628, 95662 &bull; Sacramento</div>
               <div class="metro-corridors">
-                <b>Key Corridors:</b> Sunrise Mall district, Greenback Ln, Madison Ave retail strip, Fair Oaks Village.
+                <b>Key Corridors:</b> Sunrise Mall district, Greenback Ln, Madison Ave retail strip, Fair Oaks Village &amp; Orangevale corridor.
               </div>
             </div>
-            <a href="service-areas.html#sacramento-county" class="metro-action-btn">
-              <span>Citrus Heights Area</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            </a>
+            <div>
+              <a href="#contact" onclick="selectMetroCity('citrus-heights', true); return false;" class="metro-action-btn" style="background: var(--gold-main); color: #000; font-weight: 800; margin-bottom: 8px; text-decoration: none;">
+                <span>⚡ Request Citrus Heights Blueprint &rarr;</span>
+              </a>
+              <a href="service-areas.html#sacramento-county" class="metro-action-btn" style="opacity: 0.85; font-size: 0.82rem; text-decoration: none;">
+                <span>Citrus Heights Area Specs ↗</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
           </div>
 
           <!-- 8. Sacramento Metro Core -->
-          <div class="metro-card">
+          <div class="metro-card" id="metro-sacramento">
             <div>
               <div class="metro-card-header">
                 <h4 class="metro-card-title">Sacramento Metro Core</h4>
@@ -3798,10 +3844,15 @@
                 <b>Key Corridors:</b> Downtown grid, Midtown, Golden 1 Center, Natomas, Arden-Arcade commercial hubs.
               </div>
             </div>
-            <a href="service-areas.html#sacramento-county" class="metro-action-btn">
-              <span>Sacramento Core Area</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-            </a>
+            <div>
+              <a href="#contact" onclick="selectMetroCity('sacramento', true); return false;" class="metro-action-btn" style="background: var(--gold-main); color: #000; font-weight: 800; margin-bottom: 8px; text-decoration: none;">
+                <span>⚡ Request Sacramento Core Blueprint &rarr;</span>
+              </a>
+              <a href="service-areas.html#sacramento-county" class="metro-action-btn" style="opacity: 0.85; font-size: 0.82rem; text-decoration: none;">
+                <span>Sacramento Core Area Specs ↗</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -4451,6 +4502,81 @@
     // Also run immediately in case DOM is already ready
     if (document.readyState !== 'loading') {
       updateRoiCalc();
+    }
+
+    /* Interactive City Selection (Local Falcon Radar & Primary Service Communities) */
+    function selectMetroCity(citySlug, toContact = false) {
+      const cityMap = {
+        'folsom': { name: 'Folsom (HQ)', id: 'metro-folsom', dist: 'HQ Anchor &bull; 705 Gold Lake Dr' },
+        'roseville': { name: 'Roseville', id: 'metro-roseville', dist: '8.4 mi NW &bull; Galleria & Douglas Blvd' },
+        'rocklin': { name: 'Rocklin', id: 'metro-rocklin', dist: '11.2 mi NW &bull; Stanford Ranch & Sierra College' },
+        'granite-bay': { name: 'Granite Bay', id: 'metro-granite-bay', dist: '5.6 mi N &bull; Luxury Residential Corridor' },
+        'el-dorado-hills': { name: 'El Dorado Hills', id: 'metro-el-dorado-hills', dist: '6.1 mi E &bull; Town Center & Latrobe Rd' },
+        'rancho-cordova': { name: 'Rancho Cordova', id: 'metro-rancho-cordova', dist: '7.8 mi SW &bull; Sunrise & White Rock Corridors' },
+        'citrus-heights': { name: 'Citrus Heights', id: 'metro-citrus-heights', dist: '6.9 mi W &bull; Sunrise Mall & Greenback Strip' },
+        'fair-oaks': { name: 'Fair Oaks', id: 'metro-citrus-heights', dist: '5.8 mi W &bull; Fair Oaks Village & American River' },
+        'orangevale': { name: 'Orangevale', id: 'metro-citrus-heights', dist: '3.4 mi NW &bull; Greenback Lane Corridor' },
+        'carmichael': { name: 'Carmichael', id: 'metro-citrus-heights', dist: '9.2 mi W &bull; Fair Oaks & Marconi Corridors' },
+        'sacramento': { name: 'Sacramento', id: 'metro-sacramento', dist: '21 mi W &bull; Downtown, Midtown & Arden Core' }
+      };
+
+      const city = cityMap[citySlug] || { name: citySlug, id: 'metro-hub', dist: 'Greater Sacramento Metro' };
+
+      // 1. Update Live Simulator Ping Alert
+      const pingAlert = document.getElementById('simPingAlert');
+      const pingText = document.getElementById('simPingText');
+      if (pingText) {
+        pingText.innerHTML = `<b>LIVE GEO-GRID SCAN:</b> ${city.name} node verified (#1 in 3-Pack &bull; ${city.dist})`;
+      }
+      if (pingAlert) {
+        pingAlert.style.borderColor = 'rgba(212, 175, 55, 0.6)';
+        pingAlert.style.background = 'rgba(212, 175, 55, 0.12)';
+      }
+
+      // 2. Highlight clicked radar node in hero
+      document.querySelectorAll('.sim-radar-node').forEach(n => n.classList.remove('active-node'));
+      const activeNode = document.getElementById('radar-node-' + citySlug);
+      if (activeNode) {
+        activeNode.classList.add('active-node');
+      }
+
+      // 3. Pre-populate or suggest business city in Contact Form
+      const bizInput = document.getElementById('contactBusiness');
+      if (bizInput) {
+        bizInput.placeholder = `e.g. Your Company - ${city.name}`;
+      }
+
+      // 4. Handle navigation & focus
+      if (toContact) {
+        setLeadSource(`${city.name} Regional Grid`);
+        const contactSec = document.getElementById('contact');
+        if (contactSec) {
+          contactSec.scrollIntoView({ behavior: 'smooth' });
+          if (bizInput) {
+            setTimeout(() => {
+              bizInput.focus();
+              if (!bizInput.value) {
+                bizInput.value = `${city.name} Business`;
+              }
+            }, 500);
+          }
+        }
+        return;
+      }
+
+      // Smooth scroll to the Metro Hub card and trigger gold spotlight pulse
+      const targetCard = document.getElementById(city.id);
+      if (targetCard) {
+        document.querySelectorAll('.metro-card').forEach(c => c.classList.remove('metro-card-active'));
+        targetCard.classList.add('metro-card-active');
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => {
+          targetCard.classList.remove('metro-card-active');
+        }, 3500);
+      } else {
+        const hub = document.getElementById('metro-hub');
+        if (hub) hub.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     /* Lead Source Tracking & Dynamic Leak Value Sync */
