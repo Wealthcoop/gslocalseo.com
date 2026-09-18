@@ -93,11 +93,11 @@ That is roughly ${monthly_bleed:,} a month in gross revenue walking out the door
 
 The reason you aren't in the #1 spot isn't because you need more backlinks. {flaws}
 
-I put together a confidential 2-page breakdown showing the exact map cutoff points and how we move {business} into the top 3 spots within 60 to 90 days:
+I put together a confidential breakdown showing the exact map cutoff points and how we move {business} into the top 3 spots within 60 to 90 days:
 
-👉 https://www.gslocalseo.com/doc-sales-page
+👉 https://www.gslocalseo.com/protocol
 
-Zero sales pitch. No 45-minute slide deck. Just open the breakdown, look at the math, and see if it makes sense for your business.
+Zero sales pitch. No 45-minute slide deck. Just open the protocol, look at the math, and see if it makes sense for your business.
 
 Best regards,
 
@@ -128,11 +128,11 @@ https://www.gslocalseo.com
   
   <p>The reason you aren't in the #1 spot isn't because you need more backlinks. {flaws}</p>
   
-  <p>I put together a confidential 2-page breakdown showing the exact map cutoff points and how we move {business} into the top 3 spots within 60 to 90 days:</p>
+  <p>I put together a confidential breakdown showing the exact map cutoff points and how we move {business} into the top 3 spots within 60 to 90 days:</p>
   
   <p style="margin: 24px 0;">
-    <a href="https://www.gslocalseo.com/doc-sales-page" style="background-color: #0f172a; color: #ffffff; padding: 12px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; display: inline-block;">
-      👉 View {business} Telemetry Breakdown & SOP
+    <a href="https://www.gslocalseo.com/protocol" style="background-color: #0f172a; color: #ffffff; padding: 12px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; display: inline-block;">
+      👉 View {business} Telemetry Protocol & SOP
     </a>
   </p>
   
@@ -206,7 +206,7 @@ def export_instantly_csv(leads, output_csv="crawlspace_instantly_import.csv"):
                 lead.get("phone"), lead.get("website"), lead.get("city"),
                 lead.get("current_maps_status"), lead.get("top_competitor_stealing_traffic"),
                 f"${ticket:,}", missed, f"${bleed:,}", lead.get("missing_gbp_attributes"),
-                "https://www.gslocalseo.com/doc-sales-page"
+                "https://www.gslocalseo.com/protocol"
             ])
     print(f"Exported {len(leads)} leads to Instantly/Smartlead format: {output_csv}")
 
