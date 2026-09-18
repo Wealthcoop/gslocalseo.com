@@ -1,0 +1,50 @@
+{
+  "type": "video",
+  "service": "Crawlspace Waterproofing & Encapsulation",
+  "city": "Roseville",
+  "coordinates": [
+    38.752124,
+    -121.288006
+  ],
+  "heading": "Why Google Maps 3-Pack Telemetry Dictates Sacramento Crawlspace Contractor Revenue",
+  "output_video": "./geo_dist/roseville-ca-why-google-maps-3pack-telemetry-dictates.mp4",
+  "poster_frame": "./geo_dist/roseville-ca-why-google-maps-3pack-telemetry-dictates-poster.jpg",
+  "pdf_variant": "./geo_dist/roseville-ca-why-google-maps-3pack-telemetry-dictates-pdf-variant.jpg",
+  "companion_pdf": "./geo_dist/roseville-ca-why-google-maps-3pack-telemetry-dictates-geo-authority.pdf",
+  "pdf_word_count": 561,
+  "article_title": "Crawlspace Waterproofing & Encapsulation & Google Maps 3-Pack Optimization in Roseville, CA",
+  "focus_type": "SERP Keyword Authority Guide",
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Why Google Maps 3-Pack Telemetry Dictates Sacramento Crawlspace Contractor Revenue",
+    "description": "Why Google Maps 3-Pack Telemetry Dictates Sacramento Crawlspace Contractor Revenue by Gold Standard Local SEO. Geo-Targeted in Roseville, CA 95661. Official Google Maps CID: https://maps.google.com/?cid=7895656689241912038. Call (916) 234-3457 for 3-Pack prominence.",
+    "thumbnailUrl": "https://www.gslocalseo.com/assets/roseville-ca-why-google-maps-3pack-telemetry-dictates-poster.jpg",
+    "contentUrl": "https://www.gslocalseo.com/assets/roseville-ca-why-google-maps-3pack-telemetry-dictates.mp4",
+    "uploadDate": "2026-09-17T22:01:51+00:00",
+    "duration": "PT15S",
+    "contentLocation": {
+      "@type": "Place",
+      "name": "Roseville, CA",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.752124,
+        "longitude": -121.288006
+      }
+    },
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "Gold Standard Local SEO",
+      "telephone": "+1-916-234-3457",
+      "url": "https://www.gslocalseo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "705 Gold Lake Dr Ste 250",
+        "addressLocality": "Folsom",
+        "addressRegion": "CA",
+        "postalCode": "95630",
+        "addressCountry": "US"
+      }
+    }
+  }
+}
