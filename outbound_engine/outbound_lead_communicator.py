@@ -2,7 +2,7 @@
 """
 Outbound Lead Communicator & Dispatch Engine
 Autonomous cold outbound dispatcher for Gold Standard Local SEO.
-Supports dry-run preview, test-sends, full SMTP dispatch, and Instantly/Smartlead CSV export.
+Supports Resend API, direct SMTP, dry-run previews, test-sends, and Instantly CSV export.
 """
 
 import os
@@ -12,18 +12,31 @@ import csv
 import smtplib
 import argparse
 import time
+import subprocess
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 
+# Load environment variables from .env if present
+ENV_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+if os.path.exists(ENV_PATH):
+    with open(ENV_PATH) as f:
+        for line in f:
+            if line.strip() and not line.startswith("#") and "=" in line:
+                k, v = line.strip().split("=", 1)
+                os.environ.setdefault(k, v)
+
 LEADS_FILE = "crawlspace_leads_sacramento.json"
 HISTORY_FILE = "outbound_dispatch_history.json"
 DEFAULT_SENDER_NAME = "Justin Davis"
-DEFAULT_SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "goldstandardaiagency@gmail.com")
-SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.gmail.com")
-SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
-SMTP_USER = os.environ.get("SMTP_USER", "")
-SMTP_PASS = os.environ.get("SMTP_PASS", "")
+DEFAULT_SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "justin@goldstandard.monster")
+DEFAULT_REPLY_TO = os.environ.get("REPLY_TO", "goldstandardaiagency@gmail.com")
+
+RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
+SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.resend.com")
+SMTP_PORT = int(os.environ.get("SMTP_PORT", "465"))
+SMTP_USER = os.environ.get("SMTP_USER", "resend")
+SMTP_PASS = os.environ.get("SMTP_PASS", RESEND_API_KEY)
 
 def load_leads():
     if not os.path.exists(LEADS_FILE):
@@ -50,7 +63,7 @@ def record_history(entry):
 def generate_email_content(lead):
     # Editorial voice: 70% Alex Hormozi (math, margins, clarity) + 30% Stephen Covey (stewardship, win-win)
     owner_first_name = lead.get("owner_name", "there").split()[0]
-    if owner_first_name.lower() in ["operations", "client"]:
+    if owner_first_name.lower() in ["operations", "client", "commercial", "regional"]:
         greeting = f"Hey {lead.get('business_name')} team,"
     else:
         greeting = f"Hey {owner_first_name},"
@@ -139,22 +152,44 @@ https://www.gslocalseo.com
 """
     return subject, plain_text, html_content
 
+def send_via_resend_api(to_email, to_name, subject, text_body, html_body):
+    if not RESEND_API_KEY:
+        return False, "RESEND_API_KEY is not configured in .env or environment"
+
+    payload = {
+        "from": f"{DEFAULT_SENDER_NAME} <{DEFAULT_SENDER_EMAIL}>",
+        "to": [to_email],
+        "reply_to": DEFAULT_REPLY_TO,
+        "subject": subject,
+        "text": text_body,
+        "html": html_body
+    }
+
+    cmd = [
+        "curl", "-s", "-X", "POST", "https://api.resend.com/emails",
+        "-H", f"Authorization: Bearer {RESEND_API_KEY}",
+        "-H", "Content-Type: application/json",
+        "-d", json.dumps(payload)
+    ]
+
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    if res.returncode != 0:
+        return False, f"Curl error: {res.stderr}"
+
+    try:
+        resp_data = json.loads(res.stdout)
+        if "id" in resp_data:
+            return True, f"Delivered (Resend ID: {resp_data['id']})"
+        else:
+            return False, f"Resend API Error: {resp_data.get('message', res.stdout)}"
+    except Exception as e:
+        return False, f"Response parsing error: {e} ({res.stdout})"
+
 def export_instantly_csv(leads, output_csv="crawlspace_instantly_import.csv"):
     headers = [
-        "Email",
-        "First Name",
-        "Last Name",
-        "Company Name",
-        "Phone",
-        "Website",
-        "City",
-        "Current Rank",
-        "Competitor",
-        "Average Ticket",
-        "Monthly Missed Calls",
-        "Monthly Revenue Bleed",
-        "Missing Attributes",
-        "Sales Doc URL"
+        "Email", "First Name", "Last Name", "Company Name", "Phone",
+        "Website", "City", "Current Rank", "Competitor", "Average Ticket",
+        "Monthly Missed Calls", "Monthly Revenue Bleed", "Missing Attributes", "Sales Doc URL"
     ]
     with open(output_csv, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -167,19 +202,10 @@ def export_instantly_csv(leads, output_csv="crawlspace_instantly_import.csv"):
             missed = lead.get("monthly_missed_calls", 5)
             bleed = ticket * missed
             writer.writerow([
-                lead.get("email"),
-                first,
-                last,
-                lead.get("business_name"),
-                lead.get("phone"),
-                lead.get("website"),
-                lead.get("city"),
-                lead.get("current_maps_status"),
-                lead.get("top_competitor_stealing_traffic"),
-                f"${ticket:,}",
-                missed,
-                f"${bleed:,}",
-                lead.get("missing_gbp_attributes"),
+                lead.get("email"), first, last, lead.get("business_name"),
+                lead.get("phone"), lead.get("website"), lead.get("city"),
+                lead.get("current_maps_status"), lead.get("top_competitor_stealing_traffic"),
+                f"${ticket:,}", missed, f"${bleed:,}", lead.get("missing_gbp_attributes"),
                 "https://www.gslocalseo.com/doc-sales-page"
             ])
     print(f"Exported {len(leads)} leads to Instantly/Smartlead format: {output_csv}")
@@ -187,6 +213,8 @@ def export_instantly_csv(leads, output_csv="crawlspace_instantly_import.csv"):
 def preview_campaign(leads):
     print("=" * 70)
     print("GOLD STANDARD COLD OUTBOUND DISPATCH PREVIEW")
+    print(f"Sender: {DEFAULT_SENDER_NAME} <{DEFAULT_SENDER_EMAIL}>")
+    print(f"Reply-To: {DEFAULT_REPLY_TO}")
     print("=" * 70)
     for idx, lead in enumerate(leads, 1):
         subject, text, _ = generate_email_content(lead)
@@ -196,42 +224,13 @@ def preview_campaign(leads):
         print(text)
         print("-" * 70)
 
-def send_email_smtp(to_email, to_name, subject, text_body, html_body):
-    if not SMTP_USER or not SMTP_PASS:
-        print("[WARNING] SMTP_USER or SMTP_PASS environment variables not set.")
-        print("To send live emails, export SMTP_USER and SMTP_PASS (e.g. Gmail App Password).")
-        return False, "Missing SMTP credentials"
-
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"] = f"{DEFAULT_SENDER_NAME} <{DEFAULT_SENDER_EMAIL}>"
-    msg["To"] = f"{to_name} <{to_email}>"
-    msg["Reply-To"] = DEFAULT_SENDER_EMAIL
-
-    part1 = MIMEText(text_body, "plain")
-    part2 = MIMEText(html_body, "html")
-    msg.attach(part1)
-    msg.attach(part2)
-
-    try:
-        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
-        server.login(SMTP_USER, SMTP_PASS)
-        server.sendmail(DEFAULT_SENDER_EMAIL, to_email, msg.as_string())
-        server.quit()
-        return True, "Delivered successfully"
-    except Exception as e:
-        return False, str(e)
-
 def main():
-    parser = argparse.ArgumentParser(description="Gold Standard Cold Outbound Dispatcher")
+    parser = argparse.ArgumentParser(description="Gold Standard Cold Outbound Dispatcher (Resend API Engine)")
     parser.add_argument("--preview", action="store_true", help="Preview generated email copy for all leads")
     parser.add_argument("--export-csv", action="store_true", help="Export to Instantly/Smartlead CSV")
     parser.add_argument("--test-send", type=str, help="Send a single test email to a specified recipient")
     parser.add_argument("--send-lead", type=str, help="Send email to a specific business by name")
-    parser.add_argument("--send-all", action="store_true", help="Dispatch live emails to all leads (requires SMTP)")
+    parser.add_argument("--send-all", action="store_true", help="Dispatch live emails to all leads via Resend")
     parser.add_argument("--throttle", type=int, default=15, help="Seconds delay between emails (default 15s)")
 
     args = parser.parse_args()
@@ -245,25 +244,27 @@ def main():
         preview_campaign(leads)
         export_instantly_csv(leads)
         print("\n[NEXT STEPS FOR DISPATCH]")
-        print("1. To send a live test to yourself: python3 outbound_lead_communicator.py --test-send your-email@gmail.com")
-        print("2. To dispatch live via Gmail/SMTP: set SMTP_USER and SMTP_PASS, then run with --send-all")
-        print("3. Or import crawlspace_instantly_import.csv directly into Instantly.ai / Apollo / HubSpot")
+        print("1. To send a live test to yourself: python3 outbound_lead_communicator.py --test-send goldstandardaiagency@gmail.com")
+        print("2. To dispatch a specific contractor: python3 outbound_lead_communicator.py --send-lead 'Critter Bros'")
+        print("3. To dispatch the full batch: python3 outbound_lead_communicator.py --send-all")
         return
 
     if args.test_send:
         sample_lead = leads[0]
         subject, text_body, html_body = generate_email_content(sample_lead)
-        subject = f"[TEST SEND - {sample_lead['business_name']}] " + subject
-        print(f"Sending test email for '{sample_lead['business_name']}' to: {args.test_send}...")
-        success, reason = send_email_smtp(args.test_send, "Test Recipient", subject, text_body, html_body)
+        subject = f"[TEST PREVIEW - {sample_lead['business_name']}] " + subject
+        print(f"Sending test email from '{DEFAULT_SENDER_NAME} <{DEFAULT_SENDER_EMAIL}>' to: {args.test_send}...")
+        success, reason = send_via_resend_api(args.test_send, "Justin Davis", subject, text_body, html_body)
         if success:
-            print("✓ Test email sent successfully!")
+            print(f"✓ {reason}")
             record_history({
                 "timestamp": datetime.now().isoformat(),
                 "mode": "test_send",
                 "recipient": args.test_send,
+                "sender": DEFAULT_SENDER_EMAIL,
                 "business": sample_lead["business_name"],
-                "status": "SENT"
+                "status": "SENT",
+                "details": reason
             })
         else:
             print(f"✗ Dispatch failed: {reason}")
@@ -275,36 +276,40 @@ def main():
             print(f"Could not find lead matching: {args.send_lead}")
             return
         subject, text_body, html_body = generate_email_content(target)
-        print(f"Sending live email to {target['business_name']} ({target['email']})...")
-        success, reason = send_email_smtp(target["email"], target["owner_name"], subject, text_body, html_body)
+        print(f"Sending live email to {target['business_name']} ({target['email']}) from {DEFAULT_SENDER_EMAIL}...")
+        success, reason = send_via_resend_api(target["email"], target["owner_name"], subject, text_body, html_body)
         if success:
-            print(f"✓ Email delivered to {target['email']}")
+            print(f"✓ Email delivered to {target['email']} ({reason})")
             record_history({
                 "timestamp": datetime.now().isoformat(),
                 "mode": "live_single",
                 "recipient": target["email"],
+                "sender": DEFAULT_SENDER_EMAIL,
                 "business": target["business_name"],
-                "status": "SENT"
+                "status": "SENT",
+                "details": reason
             })
         else:
             print(f"✗ Dispatch failed: {reason}")
         return
 
     if args.send_all:
-        print(f"Starting automated outbound batch for {len(leads)} leads (delay: {args.throttle}s)...")
+        print(f"Starting automated outbound batch for {len(leads)} leads via Resend (delay: {args.throttle}s)...")
         for idx, lead in enumerate(leads, 1):
             subject, text_body, html_body = generate_email_content(lead)
             print(f"[{idx}/{len(leads)}] Dispatching to {lead['business_name']} ({lead['email']})...")
-            success, reason = send_email_smtp(lead["email"], lead["owner_name"], subject, text_body, html_body)
+            success, reason = send_via_resend_api(lead["email"], lead["owner_name"], subject, text_body, html_body)
             record_history({
                 "timestamp": datetime.now().isoformat(),
                 "mode": "live_batch",
                 "recipient": lead["email"],
+                "sender": DEFAULT_SENDER_EMAIL,
                 "business": lead["business_name"],
-                "status": "SENT" if success else f"FAILED: {reason}"
+                "status": "SENT" if success else f"FAILED: {reason}",
+                "details": reason
             })
             if success:
-                print(f"  ✓ Sent successfully.")
+                print(f"  ✓ Sent successfully ({reason})")
             else:
                 print(f"  ✗ Failed: {reason}")
             if idx < len(leads):

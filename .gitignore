@@ -5,3 +5,5 @@ vendor_py/
 .DS_Store
 geo_dist/
 vendor_py
+.env
+.env*
