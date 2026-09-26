@@ -194,10 +194,16 @@ def render_frame(frame_num):
         draw.text((cx + 60, cy + 120), "Visit https://www.gslocalseo.com/doc-sales-page", fill=ACCENT_GOLD, font=FONT_HERO)
         draw.text((cx + 60, cy + 210), "See the exact map cutoff points and the step-by-step 60 to 90-day recovery plan.", fill=TEXT_WHITE, font=FONT_BODY)
         
-        draw.rectangle([(cx + 60, cy + 280), (cx + 600, cy + 370)], fill=ACCENT_GOLD)
-        draw.text((cx + 90, cy + 305), "CALL DIRECT: (916) 234-3457", fill=(11, 19, 43), font=FONT_TITLE)
+        phone_str = "CALL DIRECT: (916) 234-3457"
+        bx = cx + 60
+        by = cy + 280
+        t_w = FONT_TITLE.getlength(phone_str)
+        pad_x = 35
+        bw = int(t_w + (pad_x * 2))
+        draw.rectangle([(bx, by), (bx + bw, by + 90)], fill=ACCENT_GOLD)
+        draw.text((bx + pad_x, by + 25), phone_str, fill=(11, 19, 43), font=FONT_TITLE)
 
-        draw.text((cx + 660, cy + 315), "Justin Davis | Founder & Lead Telemetry Architect", fill=TEXT_WHITE, font=FONT_SUBTITLE)
+        draw.text((bx + bw + 40, by + 30), "Justin Davis | Founder & Local SEO Director", fill=TEXT_WHITE, font=FONT_SUBTITLE)
 
     return im
 
