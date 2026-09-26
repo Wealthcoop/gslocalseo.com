@@ -1,0 +1,50 @@
+{
+  "type": "video",
+  "service": "Commercial Local SEO & Lead Acquisition",
+  "city": "Rocklin",
+  "coordinates": [
+    38.790734,
+    -121.235788
+  ],
+  "heading": "Speed-to-Lead Voice AI Systems for Contractors in Rocklin",
+  "output_video": "./geo_dist/rocklin-ca-speedtolead-voice-ai-systems-for-contractors.mp4",
+  "poster_frame": "./geo_dist/rocklin-ca-speedtolead-voice-ai-systems-for-contractors-poster.jpg",
+  "pdf_variant": "./geo_dist/rocklin-ca-speedtolead-voice-ai-systems-for-contractors-pdf-variant.jpg",
+  "companion_pdf": "./geo_dist/rocklin-ca-speedtolead-voice-ai-systems-for-contractors-geo-authority.pdf",
+  "pdf_word_count": 567,
+  "article_title": "How Can Local Businesses in Rocklin, CA Dominate Google Maps Searches for Commercial Local SEO & Lead Acquisition?",
+  "focus_type": "Generative Engine Optimization (GEO) Query Synthesis",
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Speed-to-Lead Voice AI Systems for Contractors in Rocklin",
+    "description": "Speed-to-Lead Voice AI Systems for Contractors in Rocklin by Gold Standard Local SEO. Geo-Targeted in Rocklin, CA 95677. Official Google Maps CID: https://maps.google.com/?cid=7895656689241912038. Call (916) 234-3457 for 3-Pack prominence.",
+    "thumbnailUrl": "https://www.gslocalseo.com/assets/rocklin-ca-speedtolead-voice-ai-systems-for-contractors-poster.jpg",
+    "contentUrl": "https://www.gslocalseo.com/assets/rocklin-ca-speedtolead-voice-ai-systems-for-contractors.mp4",
+    "uploadDate": "2026-09-16T10:58:11+00:00",
+    "duration": "PT5S",
+    "contentLocation": {
+      "@type": "Place",
+      "name": "Rocklin, CA",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.790734,
+        "longitude": -121.235788
+      }
+    },
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "Gold Standard Local SEO",
+      "telephone": "+1-916-234-3457",
+      "url": "https://www.gslocalseo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "705 Gold Lake Dr Ste 250",
+        "addressLocality": "Folsom",
+        "addressRegion": "CA",
+        "postalCode": "95630",
+        "addressCountry": "US"
+      }
+    }
+  }
+}
